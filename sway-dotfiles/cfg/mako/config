@@ -1,0 +1,21 @@
+# Coustom
+font=JetBrains Mono Nerd Font 12
+anchor=top-center
+sort=-time
+layer=overlay
+width=350
+height=500
+padding=10
+icons=1
+icon-path=/usr/share/icons/Papirus
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+
+# Colors
+background-color=#11121D
+text-color=#cdd6f4
+border-color=#1e1e2e
+progress-color=over #313244
+[urgency=high]
+border-color=#fab387
