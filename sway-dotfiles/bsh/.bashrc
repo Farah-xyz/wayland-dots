@@ -41,6 +41,9 @@ export FZF_DEFAULT_OPTS=" \
 --pointer='▶'
 --marker='✓'
 --bind 'ctrl-a:select-all'"
+# Run Video With Fzf I'ts Magick
+alias run_in_mpv="fzf --multi --bind 'enter:become(mpv {+})'"
+bind '"\C-p":"run_in_mpv\n"'
 # Run NeoVim With Fzf I'ts Magick
 alias run_in_neovim="fzf --multi --bind 'enter:become(nvim {+})'"
 bind '"\C-v":"run_in_neovim\n"'
@@ -124,12 +127,14 @@ alias gsh='git stash'
 alias gw='git whatchanged'
 # yt-dlp Alias
 alias yt='yt-dlp \
+    --downloader aria2c \
     --no-playlist \
     --ignore-errors \
     --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
     --output "~/vids/%(uploader)s/%(title)s.%(ext)s" \
 '
 alias pl='yt-dlp \
+    --downloader aria2c \
     --yes-playlist \
     --ignore-errors \
     --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \

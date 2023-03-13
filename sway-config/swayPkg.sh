@@ -2,7 +2,7 @@
 sudo pacman -S --needed --noconfirm wayland xorg-xwayland sway swaybg swaylock swayidle waybar \
 	kitty lxterminal fuzzel grim slurp swappy mako \
 	firefox qutebrowser \
-	nemo mpv yt-dlp imv \
+	nemo mpv yt-dlp aria2 imv \
 	arc-gtk-theme papirus-icon-theme \
 	adobe-source-han-sans-jp-fonts ttf-dejavu ttf-font-awesome ttf-jetbrains-mono-nerd \
 	neovim fzf fd exa bat wl-clipboard trash-cli man-db brightnessctl imagemagick \
