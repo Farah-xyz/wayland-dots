@@ -96,6 +96,7 @@ alias dots="cd ~/.local/wayland-dots/"
 alias swayc="nvim ~/.config/sway/config"
 alias waybarc="nvim ~/.config/waybar/config"
 alias footc="nvim ~/.config/foot/foot.ini"
+alias lxtermc="nvim ~/.config/lxterminal/lxterminal.conf"
 alias qtilec="nvim ~/.config/qtile/config.py"
 alias fishc="nvim ~/.config/fish/config.fish"
 alias xmonadc="nvim ~/.config/xmonad/xmonad.hs"
@@ -123,9 +124,16 @@ alias gsh='git stash'
 alias gw='git whatchanged'
 # yt-dlp Alias
 alias yt='yt-dlp \
-    --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
+    --no-playlist \
     --ignore-errors \
-    --output "~/vids/%(uploader)s/%(upload_date)s-%(title)s-%(id)s.%(ext)s" \
+    --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
+    --output "~/vids/%(uploader)s/%(title)s.%(ext)s" \
+'
+alias pl='yt-dlp \
+    --yes-playlist \
+    --ignore-errors \
+    --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
+    --output "~/vids/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
 '
 #=================== Tab Completions ===================#
 # If there are multiple matches for completion, Tab should cycle through them

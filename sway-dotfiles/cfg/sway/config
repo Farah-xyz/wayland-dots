@@ -149,7 +149,7 @@
     default_border pixel 3
     default_floating_border pixel 3
     #Gaps
-    gaps inner  5
+    gaps inner  0
     gaps outer  0
     bindsym $mod+Control+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5
     bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
