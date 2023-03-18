@@ -42,7 +42,7 @@ echo "##### Pacman Things ##########"
 echo "##############################"
 sudo pacman -Rsn vim
 paccache -ruvk0
-# sudo systemctl enable bluetooth
+sudo systemctl enable bluetooth
 sudo mkdir -p /etc/pacman.d/
 cd /etc/pacman.d/
 sudo git clone https://github.com/archxyz/hooks.git
