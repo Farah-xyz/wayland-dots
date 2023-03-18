@@ -42,7 +42,7 @@ export FZF_DEFAULT_OPTS=" \
 --marker='✓'
 --bind 'ctrl-a:select-all'"
 # Run Video With Fzf I'ts Magick
-alias run_in_mpv="fzf --multi --bind 'enter:become(mpv {+})'"
+alias run_in_mpv="fzf --multi --bind 'enter:become(mpv --fs {+})'"
 bind '"\C-p":"run_in_mpv\n"'
 # Run NeoVim With Fzf I'ts Magick
 alias run_in_neovim="fzf --multi --bind 'enter:become(nvim {+})'"
@@ -83,6 +83,7 @@ alias h='history'
 alias n='clear && neofetch'
 alias c='clear'
 alias cc='clear'
+alias v='mpv --fs'
 alias ss='imv -b 11121D'
 ## Drive
 alias nm='nemo'
