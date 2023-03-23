@@ -155,5 +155,14 @@ bind "set menu-complete-display-prefix on"
 bind 'set match-hidden-files off'
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
+
+#=================== Node PKG Manager ==================#
+#npm-global-without-sudo
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+# Preserve MANPATH if you already defined it somewhere in your config.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
 #=================== Starship Peompt ===================#
 eval "$(starship init bash)"

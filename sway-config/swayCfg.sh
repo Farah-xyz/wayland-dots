@@ -17,6 +17,7 @@ ln -sf ~/.local/wayland-dots/sway-dotfiles/git/.gitconfig ~/
 # bash
 ln -sf ~/.local/wayland-dots/sway-dotfiles/bsh/.bashrc ~/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/bsh/.bash_profile ~/
+ln -sf ~/.local/wayland-dots/sway-dotfiles/bsh/.npmrc ~/
 # Prompt
 ln -sf ~/.local/wayland-dots/sway-dotfiles/prompt/starship.toml ~/.config/
 # Config Files
