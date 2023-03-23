@@ -1,6 +1,6 @@
 #####---------- EXPORTS ----------###
 export MOZ_ENABLE_WAYLAND=1
-export TERMINAL="kitty"
+export TERMINAL="foot"
 export BROWSER="qutebrowser"
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -84,7 +84,7 @@ alias n='clear && neofetch'
 alias c='clear'
 alias cc='clear'
 alias v='mpv --fs'
-alias ss='imv -b 11121D'
+alias ss='swayimg'
 ## Drive
 alias nm='nemo'
 alias drive='nemo /run/media/frhxm/'

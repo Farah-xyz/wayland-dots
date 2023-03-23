@@ -118,7 +118,7 @@
     // == Fuzzel Launcher Applications ==//
     "custom/launcher":{
         "format": " ",
-        "on-click": "fuzzel -B 3 -P 50 -w 60  -b 11121Df1 -t 9399b2ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m 89b4fa -M 89b4fa --show-actions --terminal=kitty --icon-theme=Papirus -f 'JetBrains Mono Nerd Font:weight=Bold:size=10'",
+        "on-click": "fuzzel -B 3 -P 50 -w 60  -b 11121Df1 -t 9399b2ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m 89b4fa -M 89b4fa --show-actions --terminal=foot --icon-theme=Papirus -f 'JetBrains Mono Nerd Font:weight=Bold:size=10'",
         "on-click-right": "killall fuzzel"
     },
 
@@ -128,7 +128,7 @@
         "interval": 3600,
         "exec": "checkupdates | wc -l",
         "exec-if": "exit 0",
-        "on-click": "kitty sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
+        "on-click": "foot sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
         "signal": 8
     },
 

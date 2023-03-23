@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 sudo pacman -S --needed --noconfirm wayland xorg-xwayland sway swaybg swaylock swayidle waybar \
-	kitty lxterminal fuzzel grim slurp swappy mako \
+	foot lxterminal fuzzel grim slurp swappy mako \
 	firefox qutebrowser \
-	nemo mpv yt-dlp aria2 imv \
+	nemo mpv yt-dlp aria2 swayimg \
 	arc-gtk-theme papirus-icon-theme \
 	adobe-source-han-sans-jp-fonts ttf-dejavu ttf-font-awesome ttf-jetbrains-mono-nerd \
 	neovim fzf fd exa bat wl-clipboard trash-cli man-db brightnessctl imagemagick \
@@ -12,4 +12,4 @@ sudo pacman -S --needed --noconfirm wayland xorg-xwayland sway swaybg swaylock s
 	network-manager-applet \
 	bluez bluez-utils blueman \
 	pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber alsa-utils pavucontrol \
-	xf86-video-intel xdg-user-dirs pacman-contrib neofetch starship
+	xf86-video-intel xdg-user-dirs pacman-contrib neofetch htop starship

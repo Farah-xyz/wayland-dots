@@ -11,8 +11,8 @@
 
 /* Waybar Css */
 window#waybar {
-  background-color: #11121D;
-  border-bottom: 3px solid #1e222a;
+  background-color: #1e1e2e;
+  border-bottom: 5px solid #181825;
   color: #abb2bf;
   transition-property: background-color;
   transition-duration: .5s;
@@ -34,7 +34,7 @@ window#waybar.hidden {
 #custom-launcher,
 #custom-power,
 #tray {
-  background-color: #1e1e2e;
+  background-color:#181825;
   padding: 0 15px;
   margin: 2px 4px 5px 4px;
   border: 3px solid rgba(0, 0, 0, 0);

@@ -60,17 +60,16 @@ return packer.startup(function(use)
     use("goolord/alpha-nvim")
     use("lukas-reineke/indent-blankline.nvim")
     use("akinsho/toggleterm.nvim")
-    use("feline-nvim/feline.nvim")
     -- navigation
     use("ibhagwan/fzf-lua")
     use("kyazdani42/nvim-tree.lua")
     use("akinsho/bufferline.nvim")
-   -- Color theme
-    use("xiyaowong/nvim-transparent")
-    use({"tiagovla/tokyodark.nvim",
-        config = function()
-        vim.cmd("colorscheme tokyodark")
-        end })
+    -- Color theme
+    use ({ "catppuccin/nvim", as = "catppuccin" })
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

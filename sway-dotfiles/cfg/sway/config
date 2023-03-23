@@ -24,7 +24,7 @@
 #----------------------------------#
 # Your preferred terminal emulator #
 #----------------------------------#
-    set $term kitty
+    set $term foot
 
 #-------------------------------------#
 # Your preferred application launcher #
@@ -33,7 +33,7 @@
     # set $menu wofi --show=drun --insensitive --width=25% --prompt=""
     set $menu fuzzel -B 3 -P 50 -w 60 \
     -b 11121Df1 -t 9399b2ff -s 2e3440ff -S 8fbcbbff -C 88c0d0ff -m 89b4fa -M 89b4fa \
-    --show-actions --terminal=kitty --icon-theme=Papirus -f "JetBrains Mono Nerd Font:weight=Bold:size=10"
+    --show-actions --terminal=foot --icon-theme=Papirus -f "JetBrains Mono Nerd Font:weight=Bold:size=10"
 
 #--------------------#
 # Floating modifier: #
@@ -47,18 +47,15 @@
     for_window [app_id="pavucontrol"]            floating enable
     for_window [app_id="pavucontrol"]            resize set height 540
     for_window [app_id="pavucontrol"]            resize set width 960
-    for_window [app_id="kittyfloat"]             floating enable
-    for_window [app_id="kittyfloat"]             resize set height 540
-    for_window [app_id="kittyfloat"]             resize set width 960
+    for_window [app_id="footfloat"]              floating enable
+    for_window [app_id="footfloat"]              resize set height 540
+    for_window [app_id="footfloat"]              resize set width 960
     for_window [title="lxfloat"]                 floating enable
     for_window [title="lxfloat"]                 resize set height 540
     for_window [title="lxfloat"]                 resize set width 960
     for_window [app_id="mpv"]                    floating enable
     for_window [app_id="mpv"]                    resize set height 540
     for_window [app_id="mpv"]                    resize set width 960
-    for_window [app_id="imv"]                    floating enable
-    for_window [app_id="imv"]                    resize set height 540
-    for_window [app_id="imv"]                    resize set width 960
     for_window [app_id="nemo"]                   floating enable
     for_window [app_id="nemo"]                   resize set height 540
     for_window [app_id="nemo"]                   resize set width 960
@@ -68,9 +65,9 @@
 #-----------------#
     for_window [app_id="pavucontrol"]            opacity 0.95
     for_window [app_id="telegram"]               opacity 0.95
-    for_window [app_id="kitty"]                  opacity 0.90
-    for_window [app_id="lxterminal"]             opacity 0.90
-    for_window [app_id="kittyfloat"]             opacity 0.95
+    for_window [app_id="foot"]                   opacity 0.95
+    for_window [app_id="footfloat"]              opacity 0.95
+    for_window [app_id="lxterminal"]             opacity 0.95
     for_window [app_id="lxfloat"]                opacity 0.95
 
 #---------------------#
@@ -141,7 +138,7 @@
     #
     # You can get the names of your outputs by running: swaymsg -t get_outputs
     # exec_always --no-startup-id swaybg -i ~/.config/sway/wallpaper/02.png
-    output * bg ~/pix/wall/tokyo.png fill
+    output * bg ~/pix/wall/wallhaven.png fill
 
 #-----------------------------#
 #           Misc              #
@@ -162,7 +159,7 @@
 # window colours: border background text #
 #----------------------------------------#
     client.focused          #89b4fa #89b4fa #11121D
-    client.unfocused        #2e3440 #1f222d #888888
+    client.unfocused        #181825 #313244 #888888
     client.focused_inactive #2e3440 #1f222d #888888
     client.placeholder      #2e3440 #1f222d #888888
     client.urgent           #D08770 #D08770 #ffffff
@@ -174,7 +171,7 @@
     # Start a terminal
     bindsym $mod+Return exec $term
     bindsym $mod+Backslash exec lxterminal
-    bindsym $mod+Shift+Return exec kitty --class="kittyfloat"
+    bindsym $mod+Shift+Return exec foot --app-id="footfloat"
     bindsym $mod+Shift+Backslash exec lxterminal --title="lxfloat"
     # Sway session: --
     bindsym $mod+Control+r reload
@@ -364,6 +361,7 @@ mode "resize" {
     bar {
         swaybar_command waybar
     }
+
     # Hide/unhide waybar:
     bindsym $mod+x exec killall -SIGUSR1 waybar
 
