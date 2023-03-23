@@ -52,6 +52,7 @@ return packer.startup(function(use)
     use("tpope/vim-commentary")
     use("mattn/emmet-vim")
     use("alvan/vim-closetag")
+    use("jiangmiao/auto-pairs")
     use("lilydjwg/colorizer")
     use("sheerun/vim-polyglot")
     -- easier coding
@@ -59,10 +60,7 @@ return packer.startup(function(use)
     use("goolord/alpha-nvim")
     use("lukas-reineke/indent-blankline.nvim")
     use("akinsho/toggleterm.nvim")
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+    use ("windwp/nvim-autopairs")
     -- navigation
     use("ibhagwan/fzf-lua")
     use("kyazdani42/nvim-tree.lua")
