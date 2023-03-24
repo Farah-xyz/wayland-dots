@@ -60,7 +60,13 @@ return packer.startup(function(use)
     use("goolord/alpha-nvim")
     use("lukas-reineke/indent-blankline.nvim")
     use("akinsho/toggleterm.nvim")
-    use ("windwp/nvim-autopairs")
+    use({
+      "aurum77/live-server.nvim",
+        run = function()
+          require"live_server.util".install()
+        end,
+        cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+      })
     -- navigation
     use("ibhagwan/fzf-lua")
     use("kyazdani42/nvim-tree.lua")

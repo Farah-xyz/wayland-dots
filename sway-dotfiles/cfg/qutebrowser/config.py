@@ -62,4 +62,4 @@ c.scrolling.smooth=True
 c.completion.height=200
 c.confirm_quit=["multiple-tabs", "downloads"]
 config.set("zoom.default", "90%")
-config.set("colors.webpage.darkmode.enabled", True)
+# config.set("colors.webpage.darkmode.enabled", True)
