@@ -130,14 +130,20 @@ alias gw='git whatchanged'
 alias yt='yt-dlp \
     --downloader aria2c \
     --no-playlist \
+    --no-warnings \
     --ignore-errors \
+    --quiet \
+    --progress \
     --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
     --output "~/vids/%(uploader)s/%(title)s.%(ext)s" \
 '
 alias pl='yt-dlp \
     --downloader aria2c \
     --yes-playlist \
+    --no-warnings \
     --ignore-errors \
+    --quiet \
+    --progress \
     --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
     --output "~/vids/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
 '
