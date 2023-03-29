@@ -8,32 +8,30 @@
 #---------#
     set $mod Mod1
 
-#---------#
-# Font:   #
-#---------#
-    font pango: JetBrains Mono Nerd Font 10
-
-#-----------------------------------#
-# Home row direction keys, like vim #
-#-----------------------------------#
+#------------------------------------#
+# Home row direction keys, like vim  #
+#------------------------------------#
     set $left  h
     set $down  j
     set $up    k
     set $right l
 
-#----------------------------------#
-# Your preferred terminal emulator #
-#----------------------------------#
+#------------------------------------#
+# Your preferred terminal emulator   #
+#------------------------------------#
     set $term foot
 
 #-------------------------------------#
 # Your preferred application launcher #
 #-------------------------------------#
-    # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-    # set $menu wofi --show=drun --insensitive --width=25% --prompt=""
     set $menu fuzzel -B 3 -P 50 -w 60 \
     -b#11121Df1 -t#9399b2ff -s#2e3440ff -S#8fbcbbff -C#88c0d0ff \
     --show-actions --terminal=foot --icon-theme=Papirus -f "JetBrains Mono Nerd Font:weight=Bold:pixelsize=18"
+
+#--------------------#
+# Font:              #
+#--------------------#
+    font pango: JetBrains Mono Nerd Font 10
 
 #--------------------#
 # Floating modifier: #
@@ -43,7 +41,7 @@
 #------------------------------#
 # Always float certain windows #
 #------------------------------#
-#swaymsg -t get_tree | grep app_id
+# swaymsg -t get_tree | grep app_id
     for_window [app_id="pavucontrol"]            floating enable
     for_window [app_id="pavucontrol"]            resize set height 540
     for_window [app_id="pavucontrol"]            resize set width 960
@@ -73,15 +71,9 @@
     for_window [app_id="lxterminal"]             opacity 0.95
     for_window [app_id="lxfloat"]                opacity 0.95
 
-#---------------------#
-# Focus follows mouse #
-#---------------------#
-    focus_follows_mouse yes
-
 #-----------#
 # Autostart #
 #-----------#
-    #exec_always  --no-startup-id  dunst &
     exec_always  --no-startup-id  mako &
     exec_always  --no-startup-id  nm-applet --indicator &
     exec_always  --no-startup-id  blueman-applet &
@@ -169,7 +161,7 @@
     client.background       #242424
 
 #----------------#
-# Key bindings --#
+# Key bindings   #
 #----------------#
     # Start a terminal
     bindsym $mod+Return exec $term
