@@ -27,6 +27,7 @@ ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/foot ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/lxterminal ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/mako ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/nvim ~/.config/
+ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/mpv ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/qutebrowser ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/neofetch ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/gtk-3.0 ~/.config/
