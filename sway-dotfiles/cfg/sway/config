@@ -293,7 +293,7 @@
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     # Set screen brightness to % on start up:
-    exec brightnessctl set 100%
+    exec brightnessctl set 70%
 
 #-------------#
 # Scratchpad: #
