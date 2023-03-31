@@ -32,6 +32,7 @@ window#waybar.hidden {
 #battery,
 #custom-pacman,
 #custom-launcher,
+#custom-wf-recorder,
 #custom-power,
 #tray {
   background-color:#313244;
@@ -141,4 +142,11 @@ window#waybar.hidden {
 }
 #custom-power{
   color:#f38ba8;
+}
+
+#custom-wf-recorder {
+    padding: 0 20px;
+    color: #f38ba8;
+    border: 4px solid #eba0ac;
+    background-color: #1e1e2e;
 }

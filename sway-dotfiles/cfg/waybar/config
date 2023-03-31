@@ -3,7 +3,7 @@
     "height": 10,
     "spacing": 4,
     "position": "top",
-    "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode"],
+    "modules-left": ["custom/launcher", "sway/workspaces", "custom/wf-recorder", "sway/mode"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
@@ -131,6 +131,16 @@
         "on-click": "foot sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
         "signal": 8
     },
+
+    // == Show Screen Recorder ==//
+    "custom/wf-recorder": {
+        "format": " ",
+        "return-type": "json",
+        "interval": 1,
+        "exec": "echo '{\"class\": \"recording\"}'",
+        "exec-if": "pgrep wf-recorder",
+        "on-click": "killall -s SIGINT wf-recorder && notify-send \"  Recording Complete\"",
+      },
 
     // == Show Power Manager ==//
     "custom/power": {

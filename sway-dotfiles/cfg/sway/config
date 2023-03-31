@@ -147,7 +147,7 @@ for_window {
 # Programme:               #
 #==========================#
 bindsym {
-    # Start a terminal
+    # Start a terminal:
     $mod+Return exec $term
     $mod+Backslash exec lxterminal
     $mod+Shift+Return exec foot --app-id="footfloat"
@@ -159,7 +159,7 @@ bindsym {
     $mod+Control+e exec wlogout
     $mod+Shift+x exec swaylock -f -c 000000
     $mod+Shift+c kill
-    # quick start some applications
+    # quick start some applications:
     $mod+d exec $menu
     $mod+w exec $browser
     $mod+n exec nemo
@@ -169,7 +169,10 @@ bindsym {
     $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/pix/screen/$(date +%Y-%m-%d_%H-%m-%s).jpg \
     && notify-send "  Screenshot" "See in $HOME/pix/screen"
     $mod+Control+Print exec grim -g "$(slurp)" - | swappy -f -
+    # Screen Recordings
+    --to-code $mod+Shift+r exec wf-recorder --audio -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
 }
+
 # Meidia:                  #
 #==========================#
 bindsym {
