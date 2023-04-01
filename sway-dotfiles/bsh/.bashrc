@@ -84,7 +84,7 @@ alias n='clear && neofetch'
 alias c='clear'
 alias cc='clear'
 alias v='mpv --fs'
-alias ss='swayimg'
+alias ss='swayimg --window=#11121D'
 ## Drive
 alias nm='nemo'
 alias drive='nemo /run/media/frhxm/'
