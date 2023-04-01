@@ -3,7 +3,7 @@
 # ░▀▀▀░▀░▀░▀░▀░░▀░
 #------------------------------------------#
 # First Edit 2023-03-31                    #
-# Github.com/farah-xyz/wayland-dots        #
+# github.com/farah-xyz/wayland-dots        #
 #------------------------------------------#
 #==========================#
 # Variable:                #
@@ -171,6 +171,7 @@ bindsym {
     $mod+Control+Print exec grim -g "$(slurp)" - | swappy -f -
     # Screen Recordings
     --to-code $mod+Shift+r exec wf-recorder --audio -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
+    --to-code $mod+Shift+Control+r exec wf-recorder --audio -g "$(slurp)" -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
 }
 
 # Meidia:                  #
