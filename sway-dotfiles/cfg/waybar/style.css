@@ -11,7 +11,7 @@
 
 /* Waybar Css */
 window#waybar {
-  background-color: #1e1e2e;
+  background-color: #11121D;
   border-bottom: 5px solid #181825;
   color: #abb2bf;
   transition-property: background-color;
@@ -35,7 +35,7 @@ window#waybar.hidden {
 #custom-wf-recorder,
 #custom-power,
 #tray {
-  background-color:#313244;
+  background-color:#181825;
   padding: 0 15px;
   margin: 2px 4px 5px 4px;
   border: 3px solid rgba(0, 0, 0, 0);
@@ -64,6 +64,8 @@ window#waybar.hidden {
 }
 #workspaces button.focused {
   color: #c678dd;
+  border: 2px solid #c678dd;
+  border-radius:90px
 }
 #workspaces button.urgent {
   color: #e06c75;

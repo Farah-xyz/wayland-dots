@@ -72,7 +72,7 @@ return packer.startup(function(use)
     use("kyazdani42/nvim-tree.lua")
     use("akinsho/bufferline.nvim")
     -- Color theme
-    use ({ "catppuccin/nvim", as = "catppuccin" })
+    use ("tiagovla/tokyodark.nvim")
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }

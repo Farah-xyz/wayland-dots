@@ -19,6 +19,8 @@ set {
     $down  j
     $up    k
     $right l
+    # Gtk Theme
+    $gnome-schema org.gnome.desktop.interface
 }
 
 #==========================#
