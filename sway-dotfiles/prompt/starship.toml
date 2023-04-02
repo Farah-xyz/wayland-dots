@@ -153,7 +153,8 @@ format = '[ $symbol ($version )]($style)'
 [python]
 symbol = ""
 style = "fg:#cba6f7 bg:#2c324a"
-format = '[ $symbol ($version )]($style)'
+format = '[ ($virtualenv ) $symbol ($version )]($style)'
+pyenv_version_name = true
 
 [ruby]
 symbol = ""
