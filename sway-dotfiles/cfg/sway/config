@@ -61,7 +61,7 @@ input "type:keyboard" {
     xkb_layout us
     xkb_options caps:escape
     repeat_delay 200
-    repeat_rate 100
+    repeat_rate 80
 }
 seat seat0 {
     hide_cursor when-typing enable
@@ -73,9 +73,9 @@ seat seat0 {
 #==========================#
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 output eDP-1 {
-    mode 1920x1080@60.008Hz position 0,0
-    bg #11121D solid_color
-    bg ~/pix/wall/myGirl.jpg stretch
+    mode 1920x1080@60.008Hz
+    background #11121D solid_color
+    background ~/pix/wall/myGirl.jpg fill
 }
 
 #==========================#
@@ -169,8 +169,8 @@ bindsym {
     && notify-send "  Screenshot" "See in $HOME/pix/screen"
     $mod+Control+Print exec grim -g "$(slurp)" - | swappy -f -
     # Screen Recordings
-    --to-code $mod+Shift+r exec wf-recorder --audio -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
-    --to-code $mod+Shift+Control+r exec wf-recorder --audio -g "$(slurp)" -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
+    --to-code $mod+Shift+r exec wf-recorder --audio=alsa_output.pci-0000_00_1f.3.analog-stereo.monitor -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
+    --to-code $mod+Shift+Control+r exec wf-recorder --audio=alsa_output.pci-0000_00_1f.3.analog-stereo.monitor -g "$(slurp)" -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
 }
 
 # Meidia:                  #
