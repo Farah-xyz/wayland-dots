@@ -1,7 +1,7 @@
 #####---------- EXPORTS ----------###
 export MOZ_ENABLE_WAYLAND=1
 export TERMINAL="foot"
-export BROWSER="qutebrowser"
+export BROWSER="firefox"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export MYVIMRC="$HOME/.config/nvim/init.lua"
