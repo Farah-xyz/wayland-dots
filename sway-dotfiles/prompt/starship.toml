@@ -15,6 +15,10 @@ $time\
 $character"""
 # [](fg:#2c324a bg:#333a56)\
 
+
+# disbaled Worning
+command_timeout = 10000
+
 # Disable the blank line at the start of the prompt
 add_newline = true
 
