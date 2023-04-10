@@ -171,7 +171,6 @@ bindsym {
     --to-code $mod+Shift+r exec wf-recorder --audio=alsa_output.pci-0000_00_1f.3.analog-stereo.monitor -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
     --to-code $mod+Shift+Control+r exec wf-recorder --audio=alsa_output.pci-0000_00_1f.3.analog-stereo.monitor -g "$(slurp)" -f $(xdg-user-dir VIDEOS)/$(date +'recording_%Y-%m-%d-%H%M%S.mp4')
 }
-
 # Meidia:                  #
 #==========================#
 bindsym {
@@ -212,7 +211,6 @@ bindsym {
     $mod+minus move scratchpad
     $mod+equal scratchpad show
 }
-
 # Others :                 #
 #==========================#
 bindsym {
@@ -299,7 +297,6 @@ bindsym {
 #==========================#
 #  Modes:                  #
 #==========================#
-
 # Resize Mode:             #
 #==========================#
 bindsym $mod+r mode "resize"
