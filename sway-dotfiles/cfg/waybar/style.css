@@ -23,6 +23,7 @@ window#waybar {
 #clock,
 #idle_inhibitor,
 #language,
+#scratchpad,
 #pulseaudio,
 #backlight,
 #battery,
@@ -80,12 +81,21 @@ window#waybar {
 }
 #idle_inhibitor.activated {
   background-color: @surface0;
-  color:@Crust;
+  color:@crust;
 }
 
 /* Calvie Language */
 #language {
   color: @mauve;
+}
+
+/* Scratchpads Sway */
+#scratchpad {
+    background: @crust;
+    color:@blue
+}
+#scratchpad.empty {
+	background-color: transparent;
 }
 
 /* Style Audio */
@@ -146,3 +156,4 @@ window#waybar {
 #custom-power{
   color:@red;
 }
+

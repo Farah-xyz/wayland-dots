@@ -3,7 +3,7 @@
     "height": 10,
     "spacing": 4,
     "position": "top",
-    "modules-left": ["custom/launcher", "sway/workspaces", "custom/wf-recorder", "sway/mode"],
+    "modules-left": ["custom/launcher", "sway/workspaces", "sway/scratchpad", "custom/wf-recorder", "sway/mode"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
@@ -50,6 +50,16 @@
     // == Show Language Keyboard in Sway WM ==//
     "sway/language": {
         "format": "⠀ {short}⠀"
+    },
+
+    //== Show Scratchpads in Sway WM ==//
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", " "],
+        "on-click": "swaymsg scratchpad show",
+        "on-click-right": "swaymsg move window to scratchpad",
+        "tooltip": false,
     },
 
     // == Show Status Idle ==//
