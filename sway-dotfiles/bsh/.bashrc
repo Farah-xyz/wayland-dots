@@ -19,13 +19,17 @@ shopt -s extglob
 shopt -s no_empty_cmd_completion
 shopt -s nocaseglob
 ###------------- PROMPT -----------###
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-GREEN="\e[1;92m"
-CYAN="\e[1;36m"
-NC='\033[0m'
-export PS1="${CYAN}[ \W\$(parse_git_branch) ]${GREEN} ❱❱❱${NC} "
+# parse_git_branch() {
+#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+# }
+# GREEN="\e[1;92m"
+# CYAN="\e[1;36m"
+# NC='\033[0m'
+# export PS1="${CYAN}[ \W\$(parse_git_branch) ]${GREEN} ❱❱❱${NC} "
+###################
+# Starship Prompt #
+###################
+eval "$(starship init bash)"
 ###------------- FZF -----------###
 source /usr/share/fzf/key-bindings.bash
 export FZF_CTRL_T_COMMAND='fd --type f --color=never'
@@ -169,6 +173,3 @@ export PATH="$PATH:$NPM_PACKAGES/bin:${HOME}/.local/bin"
 # Preserve MANPATH if you already defined it somewhere in your config.
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
-
-#=================== Starship Peompt ===================#
-eval "$(starship init bash)"
