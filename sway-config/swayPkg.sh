@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 sudo pacman -S --needed --noconfirm wayland xorg-xwayland sway swaybg swaylock swayidle waybar \
 	foot lxterminal fuzzel grim slurp swappy mako wf-recorder \
+	hyprland hyprpaper obs-studio xdg-desktop-portal-wlr \
 	firefox qutebrowser \
 	nemo mpv yt-dlp aria2 swayimg zathura zathura-pdf-mupdf \
 	arc-gtk-theme papirus-icon-theme \

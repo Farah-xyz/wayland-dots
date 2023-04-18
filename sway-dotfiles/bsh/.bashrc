@@ -102,6 +102,7 @@ alias update_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'	# After Update Lin
 ## alias for configs
 alias dots="cd ~/.local/wayland-dots/"
 alias swayc="nvim ~/.config/sway/config"
+alias hyprc="nvim ~/.config/hypr/hyprland.conf"
 alias waybarc="nvim ~/.config/waybar/config"
 alias footc="nvim ~/.config/foot/foot.ini"
 alias lxtermc="nvim ~/.config/lxterminal/lxterminal.conf"

@@ -22,6 +22,7 @@ ln -sf ~/.local/wayland-dots/sway-dotfiles/bsh/.npmrc ~/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/prompt/starship.toml ~/.config/
 # Config Files
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/sway ~/.config/
+ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/hypr ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/waybar ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/foot ~/.config/
 ln -sf ~/.local/wayland-dots/sway-dotfiles/cfg/lxterminal ~/.config/
