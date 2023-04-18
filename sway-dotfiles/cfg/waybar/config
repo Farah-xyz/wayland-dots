@@ -3,9 +3,9 @@
     "height": 10,
     "spacing": 4,
     "position": "top",
-    "modules-left": ["custom/launcher", "sway/workspaces", "sway/scratchpad", "custom/wf-recorder", "sway/mode"],
+    "modules-left": ["custom/launcher","wlr/workspaces" , "sway/workspaces", "sway/scratchpad", "custom/wf-recorder", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
+    "modules-right": ["idle_inhibitor","hyprland/language" , "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
     // ======================= Modules configuration =============================== //
     // == Workspaces Config & Icons ==/
@@ -41,6 +41,27 @@
              "default": " "
          },
      },
+    // == Hyprland Workspaces Config & Icons ==/
+    "wlr/workspaces": {
+         "format": "{icon}",
+         "on-click": "activate",
+         "format-icons": {
+             "1": "一",
+             "2": "二",
+             "3": "三",
+             "4": "四",
+             "5": "五",
+             "6": "六",
+             "7": "七",
+             "8": "八",
+             "9": "九",
+             "10":"十",
+             "urgent": " ",
+             "focused": " ",
+             "default": " "
+          },
+         "sort-by-number": true
+    },
 
     //== Show Mode Sway WM ==//
     "sway/mode": {
@@ -50,6 +71,13 @@
     // == Show Language Keyboard in Sway WM ==//
     "sway/language": {
         "format": "⠀ {short}⠀"
+    },
+    // == Show Language Keyboard in Hyprland WM ==//
+    "hyprland/language": {
+        "format": "  {} ",
+        "format-en": "US",
+        "format-ar": "AR",
+        "keyboard-name": "at-translated-set-2-keyboard"
     },
 
     //== Show Scratchpads in Sway WM ==//
