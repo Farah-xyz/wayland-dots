@@ -5,7 +5,7 @@
     "position": "top",
     "modules-left": ["custom/launcher","wlr/workspaces" , "sway/workspaces", "sway/scratchpad", "custom/wf-recorder", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor","hyprland/language" , "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
+    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
     // ======================= Modules configuration =============================== //
     // == Workspaces Config & Icons ==/
