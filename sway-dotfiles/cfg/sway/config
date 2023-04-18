@@ -31,7 +31,7 @@ exec_always {
     nm-applet --indicator &
     blueman-applet &
     udiskie -s &
-    /usr/libexec/xdg-desktop-portal -r &
+    /usr/lib/xdg-desktop-portal-hyprland -r &
 }
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Arc-Dark'
