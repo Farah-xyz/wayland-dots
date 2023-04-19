@@ -83,7 +83,7 @@ alias nv="nvim"
 alias vim="nvim"
 ## V && X && C & H & N
 alias x='startx'
-alias s='sway'
+alias S='sway'
 alias H='Hyprland'
 alias h='history'
 alias n='clear && neofetch'
