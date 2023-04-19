@@ -12,7 +12,7 @@ set {
     # Favourite App
     $mod Mod1
     $term foot
-    $browser qutebrowser
+    $browser firefox
     $menu fuzzel -B 3 -P 50 -w 60 -b#11121Df1 -t#9399b2ff -s#2e3440ff -S#8fbcbbff -C#88c0d0ff --show-actions --terminal=foot --icon-theme=Papirus -f "JetBrains Mono Nerd Font:weight=Bold:pixelsize=18"
     # Vim Keys
     $left  h
