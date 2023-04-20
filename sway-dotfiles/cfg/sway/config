@@ -21,6 +21,7 @@ set {
     $right l
     # Gtk Theme
     $gnome-schema org.gnome.desktop.interface
+    $waybar "waybar --config $HOME/.config/waybar/sway_bar/config -s $HOME/.config/waybar/sway_bar/style.css"
 }
 
 #==========================#
@@ -335,10 +336,15 @@ mode $exit {
 #==========================#
 #  Panels:                 #
 #==========================#
-# Waybar:
-bar {
-    swaybar_command waybar
-}
+# Sway Bar:                  #
+#==========================#
+# bar {
+#     swaybar_command swaybar
+# }
+
+# Waybar:                  #
+#==========================#
+exec --no-startup-id $waybar
 
 # Hide/unhide waybar:
 bindsym $mod+x exec killall -SIGUSR1 waybar
