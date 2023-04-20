@@ -1,90 +1,195 @@
-// vim:set ft=jsonc:
 {
-  "position": "top",
-  "modules-left": [ "custom/arch-pill", "cpu", "memory", "temperature", "battery", "custom/cafeine" ],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["tray", "network", "pulseaudio", "backlight", "clock"],
-  // Modules configuration
-  "custom/arch-pill": {
-    "format": "",
-    "on-click": "fuzzel -B 3 -P 50 -w 60  -b#11121Df1 -t#9399b2ff -s#2e3440ff -S#8fbcbbff -C#88c0d0ff --show-actions --terminal=foot --icon-theme=Papirus -f 'JetBrains Mono Nerd Font:weight=Bold:pixelsize=18'",
-    "tooltip": false
-  },
-  "clock": {
-    "format": "<span foreground='#cba6f7'> </span><span>{:%I:%M %p %a %d}</span>",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "<span foreground='#89dceb'> </span><span>{:%I:%M %p}</span>",
-  },
-  "cpu": {
-    "format": "<span foreground='#89b4fa'></span>  {usage}%"
-  },
-  "memory": {
-    "format": "<span foreground='#f5e0dc'></span> {}%",
-    "on-click": "kitty htop"
-  },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "<span foreground='#eba0ac'></span> {temperatureC}°C"
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "<span foreground='#f9e2af'>{icon}</span>  {percent}%",
-    "states": [0, 50],
-    "format-icons": ["", ""]
-  },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "<span foreground='#a6e3a1'>{icon}</span>   {capacity}%",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "network": {
-    "format": "Loading",
-    "format-wifi": "{essid} ({signalStrength}%)",
-    "format-ethernet": "{ipaddr}/{cidr}",
-    "format-disconnected": "Disconnected",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "tooltip-format-wifi": "{essid}({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "on-click": "~/.config/rofi/scripts/wifi"
-  },
-  "pulseaudio": {
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "format": "<span size='13000' foreground='#fab387'></span>  {volume}%",
-    "format-muted": "<span size='14000'>ﱝ</span>",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["奔", "墳"]
-    },
-    "on-click-right": "pavucontrol"
-  },
-  "custom/cafeine": {
-    "format": "{icon}",
-    "return-type": "json",
-    "format-icons": {
-      "active": "<span foreground='#b4befe'></span>",
-      "inactive": "<span foreground='#cdd6f4'>󰒲</span>"
-    },
-    "interval": 5,
-    "exec": "~/.scripts/newm-cafeine",
-  },
+    // ======================= Waybar configuration =============================== //
+    "height": 10,
+    "spacing": 4,
+    "position": "top",
+    "modules-left": ["custom/launcher","wlr/workspaces" , "sway/workspaces", "sway/scratchpad", "custom/wf-recorder", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
-"hyprland/window": {
-    "format": " {} ",
-    "separate-outputs": true
+    // ======================= Modules configuration =============================== //
+    // == Workspaces Config & Icons ==/
+     "sway/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": true,
+         "format": "{icon}",
+         "persistent_workspaces": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+          },
+         "format-icons": {
+             "1": "一",
+             "2": "二",
+             "3": "三",
+             "4": "四",
+             "5": "五",
+             "6": "六",
+             "7": "七",
+             "8": "八",
+             "9": "九",
+             "10":"十",
+             "urgent": " ",
+             "focused": " ",
+             "default": " "
+         },
+     },
+    // == Hyprland Workspaces Config & Icons ==/
+    "wlr/workspaces": {
+         "format": "{icon}",
+         "on-click": "activate",
+         "format-icons": {
+             "1": "一",
+             "2": "二",
+             "3": "三",
+             "4": "四",
+             "5": "五",
+             "6": "六",
+             "7": "七",
+             "8": "八",
+             "9": "九",
+             "10":"十",
+             "urgent": " ",
+             "focused": " ",
+             "default": " "
+          },
+         "sort-by-number": true
+    },
+
+    //== Show Mode Sway WM ==//
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    // == Show Language Keyboard in Sway WM ==//
+    "sway/language": {
+        "format": "⠀ {short}⠀"
+    },
+    // == Show Language Keyboard in Hyprland WM ==//
+    "hyprland/language": {
+        "format": "  {} ",
+        "format-en": "US",
+        "format-ar": "AR",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+
+    //== Show Scratchpads in Sway WM ==//
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", " "],
+        "on-click": "swaymsg scratchpad show",
+        "on-click-right": "swaymsg move window to scratchpad",
+        "tooltip": false,
+    },
+
+    // == Show Status Idle ==//
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+
+    // == Show System Tray ==//
+    "tray": {
+        "spacing": 10
+    },
+
+    // == Show Clock ==//
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+         "format": "{:%H:%M}  ",
+         "format-alt": "{:%A, %B %d, %Y}  "
+    },
+
+    // == Show Light ==//
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [" ", " "],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+
+    // == Show Level Battery ==//
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "tooltip-format": "{timeTo}, {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    // == Show Volume ==//
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "   {volume}% {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+        "tooltip-format": "{desc}, {volume}%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+
+    // == Fuzzel Launcher Applications ==//
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "fuzzel -B 3 -P 50 -w 60  -b#11121Df1 -t#9399b2ff -s#2e3440ff -S#8fbcbbff -C#88c0d0ff --show-actions --terminal=foot --icon-theme=Papirus -f 'JetBrains Mono Nerd Font:weight=Bold:pixelsize=18'",
+        "on-click-right": "killall fuzzel"
+    },
+
+    // == Show Updates in archlinux ==//
+    "custom/pacman": {
+        "format": "<span font='12'>󰊠</span>  {}",
+        "interval": 3600,
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",
+        "on-click": "foot sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
+        "signal": 8
+    },
+
+    // == Show Screen Recorder ==//
+    "custom/wf-recorder": {
+        "format": " ",
+        "return-type": "json",
+        "interval": 1,
+        "exec": "echo '{\"class\": \"recording\"}'",
+        "exec-if": "pgrep wf-recorder",
+        "on-click": "killall -s SIGINT wf-recorder && notify-send \"  Recording Complete\"",
+      },
+
+    // == Show Power Manager ==//
+    "custom/power": {
+          "format": "  {}",
+          "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown'  'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' -b 'Swaylock' 'swaylock -c 11121D' --background=#11121D --text=#cdd6f4  --button-background=#89b4fa --button-border=#11121D --border-bottom=#11121D --font='jetBrains Mono Nerd Font'"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+        },
 },
-  "tray": {
-    "icon-size": 20,
-    "reverse-direction": true,
-    "spacing": 6
-  },
-}
