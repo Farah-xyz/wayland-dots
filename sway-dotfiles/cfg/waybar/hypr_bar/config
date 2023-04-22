@@ -2,14 +2,15 @@
     // ======================= Waybar configuration =============================== //
     "height": 10,
     "spacing": 4,
+    "margin": 4,
     "position": "top",
-    "modules-left": ["custom/launcher","wlr/workspaces" , "sway/workspaces", "sway/scratchpad", "custom/wf-recorder", "sway/mode"],
+    "modules-left": ["custom/launcher", "wlr/workspaces", "custom/wf-recorder"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "sway/language","custom/pacman" , "pulseaudio", "backlight", "battery", "tray", "custom/power"],
+    "modules-right": ["idle_inhibitor", "custom/pacman", "hyprland/language", "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
     // ======================= Modules configuration =============================== //
     // == Workspaces Config & Icons ==/
-     "sway/workspaces": {
+     "wlr/workspaces": {
          "disable-scroll": false,
          "all-outputs": true,
          "format": "{icon}",
@@ -41,55 +42,17 @@
              "default": " "
          },
      },
-    // == Hyprland Workspaces Config & Icons ==/
-    "wlr/workspaces": {
-         "format": "{icon}",
-         "on-click": "activate",
-         "format-icons": {
-             "1": "一",
-             "2": "二",
-             "3": "三",
-             "4": "四",
-             "5": "五",
-             "6": "六",
-             "7": "七",
-             "8": "八",
-             "9": "九",
-             "10":"十",
-             "urgent": " ",
-             "focused": " ",
-             "default": " "
-          },
-         "sort-by-number": true
-    },
-
-    //== Show Mode Sway WM ==//
+    //== Show Mode Hyprland WM ==//
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
-    },
-
-    // == Show Language Keyboard in Sway WM ==//
-    "sway/language": {
-        "format": "⠀ {short}⠀"
     },
     // == Show Language Keyboard in Hyprland WM ==//
     "hyprland/language": {
         "format": "  {} ",
-        "format-en": "US",
-        "format-ar": "AR",
+        "format-en": "us",
+        "format-ar": "ar",
         "keyboard-name": "at-translated-set-2-keyboard"
     },
-
-    //== Show Scratchpads in Sway WM ==//
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", " "],
-        "on-click": "swaymsg scratchpad show",
-        "on-click-right": "swaymsg move window to scratchpad",
-        "tooltip": false,
-    },
-
     // == Show Status Idle ==//
     "idle_inhibitor": {
         "format": "{icon}",
@@ -98,19 +61,16 @@
             "deactivated": " "
         }
     },
-
     // == Show System Tray ==//
     "tray": {
         "spacing": 10
     },
-
     // == Show Clock ==//
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
          "format": "{:%H:%M}  ",
          "format-alt": "{:%A, %B %d, %Y}  "
     },
-
     // == Show Light ==//
     "backlight": {
         "format": "{icon} {percent}%",
@@ -118,7 +78,6 @@
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
     },
-
     // == Show Level Battery ==//
     "battery": {
         "states": { "warning": 30, "critical": 15 },
@@ -129,7 +88,6 @@
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
-
     // == Show Volume ==//
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
@@ -152,14 +110,12 @@
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-middle": "pavucontrol"
     },
-
     // == Fuzzel Launcher Applications ==//
     "custom/launcher":{
         "format": " ",
         "on-click": "fuzzel -B 3 -P 50 -w 60  -b#11121Df1 -t#9399b2ff -s#2e3440ff -S#8fbcbbff -C#88c0d0ff --show-actions --terminal=foot --icon-theme=Papirus -f 'JetBrains Mono Nerd Font:weight=Bold:pixelsize=18'",
         "on-click-right": "killall fuzzel"
     },
-
     // == Show Updates in archlinux ==//
     "custom/pacman": {
         "format": "<span font='12'>󰊠</span>  {}",
@@ -169,7 +125,6 @@
         "on-click": "foot sh -c 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
         "signal": 8
     },
-
     // == Show Screen Recorder ==//
     "custom/wf-recorder": {
         "format": " ",
@@ -179,7 +134,6 @@
         "exec-if": "pgrep wf-recorder",
         "on-click": "killall -s SIGINT wf-recorder && notify-send \"  Recording Complete\"",
       },
-
     // == Show Power Manager ==//
     "custom/power": {
           "format": "  {}",
