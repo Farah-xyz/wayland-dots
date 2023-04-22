@@ -92,8 +92,8 @@ output eDP-1 {
     bindsym $mod+Control+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5
     bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
     # Activate smart borders (always)
-    smart_borders off
-    smart_gaps off
+    smart_borders on
+    smart_gaps on
     # Others
     font pango: JetBrains Mono Nerd Font 10
     floating_modifier $mod normal

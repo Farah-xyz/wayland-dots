@@ -15,7 +15,6 @@ window#waybar {
   background-color: @crust;
   color: @subtext0;
   border-bottom: 2px solid @mantle;
-  border-radius: 90px;
 }
 
 /* Group All Modules */
