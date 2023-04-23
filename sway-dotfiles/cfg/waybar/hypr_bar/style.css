@@ -131,10 +131,6 @@ window#waybar {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-/* style trayer */
-#tray {
-  color: @yellow
-}
 /* Style Coustom Module */
 #custom-launcher {
 	font-size: 20px;
