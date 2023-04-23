@@ -12,9 +12,11 @@
 
 /* Waybar Css */
 window#waybar {
-  background-color: @crust;
+  /* background-color: transparent; */
+  /* border-bottom: 2px solid @mantle; */
+  background-color: transparent;
   color: @subtext0;
-  border-bottom: 2px solid @mantle;
+  border-radius: 90px;
 }
 
 /* Group All Modules */
@@ -32,7 +34,7 @@ window#waybar {
 #custom-wf-recorder,
 #custom-power,
 #tray {
-  background-color: @mantel;
+  background-color: @crust;
   border: 3px solid;
   border-radius: 90px;
   background-origin: border-box;
