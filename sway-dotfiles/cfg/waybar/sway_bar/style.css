@@ -32,9 +32,11 @@ window#waybar {
 #custom-wf-recorder,
 #custom-power,
 #tray {
-  background-color: @base;
-  border: 3px solid @mantle;
+  background-color: @mantel;
+  border: 3px solid;
   border-radius: 90px;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   padding: 0 15px;
   margin: 2px 4px 6px;
 }
@@ -52,7 +54,7 @@ window#waybar {
   min-height: 30px;
 }
 #workspaces button.focused {
-  color: @mauve;
+  color: @red;
 }
 #workspaces button.persistent{
    color: @blue ;

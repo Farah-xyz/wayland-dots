@@ -12,9 +12,10 @@
 
 /* Waybar Css */
 window#waybar {
-  background-color: @crust;
+  /* background-color: @crust; */
+  /* border-bottom: 2px solid @mantle; */
+  background-color: transparent;
   color: @subtext0;
-  border-bottom: 2px solid @mantle;
   border-radius: 90px;
 }
 
@@ -33,9 +34,11 @@ window#waybar {
 #custom-wf-recorder,
 #custom-power,
 #tray {
-  background-color: @base;
-  border: 3px solid @mantle;
+  background-color: @crust;
+  border: 3px solid;
   border-radius: 90px;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   padding: 0 15px;
   margin: 2px 4px 6px;
 }
@@ -53,7 +56,7 @@ window#waybar {
   min-height: 30px;
 }
 #workspaces button.active {
-  color: @mauve;
+  color: @red;
 }
 #workspaces button.persistent{
    color: @blue ;
@@ -127,6 +130,10 @@ window#waybar {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+/* style trayer */
+#tray {
+  color: @yellow
 }
 /* Style Coustom Module */
 #custom-launcher {

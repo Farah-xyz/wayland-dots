@@ -3,6 +3,7 @@
     "height": 10,
     "spacing": 4,
     "margin": 4,
+    "margin-bottom": -4,
     "position": "top",
     "modules-left": ["custom/launcher", "wlr/workspaces", "custom/wf-recorder"],
     "modules-center": ["clock"],
