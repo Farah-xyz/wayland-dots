@@ -137,18 +137,18 @@ for_window [app_id="blueman"] {
 # DropDown Rules           #
 #==========================#
 for_window [app_id="pavucontrol"] {
-  floating enable
-  resize set height 540
-  resize set width 960
-  move to scratchpad
-  scratchpad show
+    floating enable
+    resize set height 540
+    resize set width 960
+    move to scratchpad
+    scratchpad show
 }
 for_window [class="qutebrowser"] {
-  floating enable
-  resize set height 850
-  resize set width 1500
-  move to scratchpad
-  scratchpad show
+    floating enable
+    resize set height 850
+    resize set width 1500
+    move to scratchpad
+    scratchpad show
 }
 # Opacity Rules:           #
 #==========================#
@@ -164,7 +164,6 @@ for_window {
 #==========================#
 # Key Bindings:            #
 #==========================#
-
 # Programme:               #
 #==========================#
 bindsym {
@@ -242,6 +241,7 @@ bindsym {
     $mod+comma workspace prev
     #slash(/)
     $mod+slash workspace back_and_forth
+    $mod+tab workspace back_and_forth
 }
 # Moving :                 #
 #==========================#
@@ -370,6 +370,7 @@ mode $mode_scratch {
         Ctrl+s mode "default"
     }
 }
+
 #==========================#
 #  Panels:                 #
 #==========================#
