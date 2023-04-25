@@ -185,7 +185,6 @@ bindsym {
     # quick start some applications:
     $mod+d exec $menu
     $mod+w exec $browser
-    $mod+n exec nemo
     # Screenshooting:
     $mod+Print exec grim -t jpeg ~/pix/screen/$(date +%Y-%m-%d_%H-%m-%s).jpg \
     && notify-send "  Screenshot" "See in $HOME/pix/screen"
@@ -214,6 +213,7 @@ bindsym {
     # Split Window
     $mod+v splitv
     $mod+b splith
+    $mod+n split none
     # Switch the current container between different layout styles
     $mod+e layout stacking
     $mod+t layout tabbed
