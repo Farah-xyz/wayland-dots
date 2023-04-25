@@ -173,7 +173,7 @@ bindsym {
     $mod+Shift+Return exec foot --app-id="footfloat"
     $mod+Shift+Backslash exec lxterminal --title="lxfloat"
     # Sway session: --
-    $mod+Control+r exec pkill waybar && swaymsg reload
+    $mod+Control+r exec pkill waybar && swaymsg reload || swaymsg reload
     $mod+Control+q exec swaynag -t warning -m 'End Wayland session ?' -b ' Yes ' 'swaymsg exit' --font 'JetBrains Mono Nerd Font' \
     --background=#11121D --text=#cdd6f4   --button-background=#89b4fa --button-border=#11121D --border-bottom=#11121D
     $mod+Control+e exec wlogout
