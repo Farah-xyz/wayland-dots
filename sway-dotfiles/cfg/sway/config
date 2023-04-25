@@ -139,16 +139,18 @@ for_window [app_id="blueman"] {
 #==========================#
 for_window [app_id="pavucontrol"] {
     floating enable
-    resize set height 540
-    resize set width 960
+    move absolute position 1050px 50px
     move to scratchpad
+    resize set height 550
+    resize set width 860
     scratchpad show
 }
 for_window [class="qutebrowser"] {
     floating enable
-    resize set height 850
-    resize set width 1500
+    move absolute position 1050px 50px
     move to scratchpad
+    resize set height 860
+    resize set width 860
     scratchpad show
 }
 # Opacity Rules:           #
@@ -363,7 +365,7 @@ bindsym Ctrl+s mode $mode_scratch
 mode $mode_scratch {
     bindsym {
         p exec swaymsg '[app_id="pavucontrol"] scratchpad show' || pavucontrol; mode "default"
-        w exec swaymsg '[class="qutebrowser"] scratchpad show'  || qutebrowser; mode "default"
+        w exec swaymsg '[class="qutebrowser"] scratchpad show'  || qutebrowser --target=window "https://chat.openai.com/" ; mode "default"
     }
     bindsym {
         Return mode "default"

@@ -57,7 +57,7 @@ c.downloads.remove_finished = 5000
 ###############################################
 ################       Others  ################
 ###############################################
-c.auto_save.session=True
+# c.auto_save.session=True
 c.scrolling.smooth=True
 c.completion.height=200
 c.confirm_quit=["multiple-tabs", "downloads"]
