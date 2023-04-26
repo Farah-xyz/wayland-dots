@@ -138,7 +138,7 @@
     // == Show Power Manager ==//
     "custom/power": {
           "format": "  {}",
-          "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown'  'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'hyprctl dispatch exit' -b 'Swaylock' 'swaylock -c 11121D' --background=#11121D --text=#cdd6f4  --button-background=#89b4fa --button-border=#11121D --border-bottom=#11121D --font='jetBrains Mono Nerd Font'"
+          "on-click": "bash ~/.config/waybar/hypr_bar/scripts/powerMenu.sh"
         },
         "return-type": "json",
         "exec-if": "which swaync-client",
