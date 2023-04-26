@@ -7,7 +7,7 @@ selected=$(echo -e "$options" | fuzzel --dmenu --border-width=3 --inner-pad=10 -
 case "$selected" in
 	"  Power Off") poweroff ;;
 	"  Restart") reboot ;;
-	"  Suspend") systemctl suspend-then-hibernate ;;
+	"  Suspend") systemctl suspend ;;
 	"  Hibernate") systemctl hibernate ;;
 	"  Log Out") hyprctl dispatch exit ;;
 	"  Lock") swaylock -c 11121D;;
