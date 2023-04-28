@@ -53,7 +53,7 @@ window#waybar {
   color: @mauve;
   padding: 0 5px;
   min-width: 20px;
-  /* min-height: 10px; */
+  min-height: 10px;
 }
 #workspaces button.focused {
   color: @red;
