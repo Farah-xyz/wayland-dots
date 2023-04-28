@@ -21,7 +21,7 @@ set {
     $right l
     # Gtk Theme
     $gnome-schema org.gnome.desktop.interface
-    $waybar "waybar --config $HOME/.config/waybar/sway_bar/config -s $HOME/.config/waybar/sway_bar/style.css"
+    $waybar "waybar --config $HOME/.config/waybar/sway_bar/config --style $HOME/.config/waybar/sway_bar/style.css"
 }
 
 #==========================#
@@ -79,7 +79,7 @@ seat seat0 {
 output eDP-1 {
     mode 1920x1080@60.008Hz
     background #11121D solid_color
-    background ~/pix/wall/perfect.jpg fill
+    background ~/pix/wall/fav.jpg fill
 }
 
 #==========================#
@@ -153,6 +153,12 @@ for_window [class="qutebrowser"] {
     resize set height 860
     resize set width 860
     scratchpad show
+}
+# Inhibit Idle Rules:      #
+#==========================#
+for_window {
+    [app_id=".*"]          inhabit_idle fullscreen
+    [class=".*"]           inhabit_idle fullscreen
 }
 # Opacity Rules:           #
 #==========================#
