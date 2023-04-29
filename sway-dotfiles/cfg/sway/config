@@ -367,7 +367,7 @@ mode $exit {
 # Scratchpads Mode:        #
 #==========================#
 set $mode_scratch "Launch: [w]qutebrowser [p]pavucontrol"
-bindsym Ctrl+s mode $mode_scratch
+bindsym mod4+s mode $mode_scratch
 mode $mode_scratch {
     bindsym {
         p exec swaymsg '[app_id="pavucontrol"] scratchpad show' || pavucontrol; mode "default"
