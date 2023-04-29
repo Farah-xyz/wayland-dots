@@ -153,12 +153,6 @@ for_window [class="qutebrowser"] {
     resize set width 860
     scratchpad show
 }
-# Inhibit Idle Rules:      #
-#==========================#
-for_window {
-    [app_id=".*"]          inhabit_idle fullscreen
-    [class=".*"]           inhabit_idle fullscreen
-}
 # Opacity Rules:           #
 #==========================#
 for_window {
@@ -168,6 +162,12 @@ for_window {
     [app_id="footfloat"]   opacity 0.95
     [app_id="lxterminal"]  opacity 0.98
     [app_id="lxfloat"]     opacity 0.95
+}
+# Inhibit Idle Rules:      #
+#==========================#
+for_window {
+    [app_id=".*"]          inhabit_idle fullscreen
+    [class=".*"]           inhabit_idle fullscreen
 }
 
 #==========================#
@@ -213,7 +213,7 @@ bindsym --locked {
     XF86MonBrightnessUp exec brightnessctl set +5%
     XF86MonBrightnessDown exec brightnessctl set 5%-
 }
-# Layout :                 #
+# Layouts :                #
 #==========================#
 bindsym {
     # Split Window
