@@ -78,7 +78,7 @@ seat seat0 {
 output eDP-1 {
     mode 1920x1080@60.008Hz
     background #11121D solid_color
-    background ~/pix/wall/fav.jpg fill
+    background ~/pix/wall/perfect.jpg fill
 }
 
 #==========================#
@@ -96,7 +96,7 @@ output eDP-1 {
     smart_borders no_gaps
     smart_gaps inverse_outer
     # Others
-    font pango: JetBrains Mono Nerd Font 10
+    font pango: JetBrains Mono Nerd Font 0
     floating_modifier $mod normal
 
 #==========================#
