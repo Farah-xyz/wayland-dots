@@ -89,12 +89,13 @@ output eDP-1 {
     default_floating_border pixel 3
     #Gaps
     gaps inner  5
-    gaps outer  5
+    gaps outer  0
+    gaps top   -5
     bindsym $mod+Control+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5
     bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
     # Activate smart borders (always)
     smart_borders no_gaps
-    smart_gaps inverse_outer
+    smart_gaps off
     # Others
     font pango: JetBrains Mono Nerd Font 0
     floating_modifier $mod normal
