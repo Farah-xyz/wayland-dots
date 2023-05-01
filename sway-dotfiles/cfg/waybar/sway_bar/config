@@ -3,6 +3,7 @@
     "height": 10,
     "spacing": 4,
     "margin": 4,
+    "margin-top": -4,
     "margin-bottom": -4,
     "position": "top",
     "modules-left": ["custom/launcher", "sway/workspaces", "sway/scratchpad", "custom/wf-recorder", "sway/mode"],
