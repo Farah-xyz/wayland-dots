@@ -46,7 +46,7 @@ export FZF_DEFAULT_OPTS=" \
 --marker='✓'
 --bind 'ctrl-a:select-all'"
 # Run Video With Fzf I'ts Magick
-alias run_in_mpv="fzf --multi --bind 'enter:become(mpv {+})'"
+alias run_in_mpv="fzf --multi --bind 'enter:become(mpv --fs {+})'"
 bind '"\C-p":"run_in_mpv\n"'
 # Run NeoVim With Fzf I'ts Magick
 alias run_in_neovim="fzf --multi --bind 'enter:become(nvim {+})'"
