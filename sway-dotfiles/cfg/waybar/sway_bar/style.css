@@ -34,11 +34,12 @@ window#waybar.hidden {
 #custom-pacman,
 #custom-launcher,
 #custom-power,
+#custom-wf-recorder,
 #tray {
   background-color: @base;
   border: 3px solid @mantle;
   padding: 0 15px;
-  margin: 2px 6px 10px 6px;
+  margin: 4px 4px 10px;
   border-radius: 90px;
   background-clip: padding-box;
 }
@@ -53,7 +54,7 @@ window#waybar.hidden {
   color: @mauve;
   padding: 0 5px;
   min-width: 20px;
-  min-height: 10px;
+  min-height: 5px;
 }
 #workspaces button.focused {
   color: @red;
