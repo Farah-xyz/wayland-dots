@@ -1,5 +1,8 @@
+# sway-Config Auto Generate
 sway-dotfiles/cfg/mpv/watch_later/
-sway-dotfiles/cfg/qutebrowser/catppuccin/__pycache__/
-sway-dotfiles/cfg/qutebrowser/catppuccin/__pycache__/__init__.cpython-310.pyc
-sway-dotfiles/cfg/qutebrowser/catppuccin/__pycache__/setup.cpython-310.pyc
 sway-dotfiles/cfg/qutebrowser/autoconfig.yml
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.py[cod]
