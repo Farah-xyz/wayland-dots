@@ -11,54 +11,43 @@
 }
 
 /* Waybar Css */
- #waybar {
-    background-color: transparent;
+window#waybar {
+  background-color: @crust;
+  color: @subtext0;
+  border-bottom: 4px solid @base;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
-#waybar > box {
-    border-radius: 90px;
-    margin: 8px 8px 8px 8px;
-    background-color: rgba(17, 18, 29, 0.9);
-    box-shadow: 1 1 3 1px #11121D;
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-/* window#waybar { */
-/*   /1* background-color: transparent; *1/ */
-/*   /1* border-bottom: 2px solid @mantle; *1/ */
-/*   background-color: transparent; */
-/*   color: @subtext0; */
-/*   border-radius: 90px; */
-/* } */
 /* Group All Modules */
 #workspaces,
 #mode,
 #clock,
 #idle_inhibitor,
 #language,
-#scratchpad,
 #pulseaudio,
 #backlight,
 #battery,
 #custom-pacman,
 #custom-launcher,
-#custom-wf-recorder,
 #custom-power,
 #tray {
-  background-color: @crust;
-  border: 3px solid;
-  border-radius: 90px;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  background-color: @base;
+  border: 3px solid @mantle;
   padding: 0 15px;
-  margin: 2px 4px 6px;
+  margin: 2px 6px 10px 6px;
+  border-radius: 90px;
+  background-clip: padding-box;
 }
 
 /* Workspaces Sway */
 #workspaces {
     margin-left: 5px;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 #workspaces button {
   color: @mauve;
