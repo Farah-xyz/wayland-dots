@@ -50,7 +50,7 @@ window#waybar {
   border: 3px solid;
   border-radius: 90px;
   background-origin: border-box;
-  background-clip: padding-box, border-box;
+  background-clip: padding-box;
   padding: 0 15px;
   margin: 2px 4px 6px;
 }

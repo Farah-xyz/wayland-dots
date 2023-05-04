@@ -78,20 +78,20 @@
     },
     // == Show Light ==//
     "backlight": {
-        "format": "{icon}   {percent}%",
-        "format-icons": ["", ""],
+        "format": "{icon} {percent}%",
+        "format-icons": [" ", " "],
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
     },
     // == Show Level Battery ==//
     "battery": {
         "states": { "warning": 30, "critical": 15 },
-        "format": "{icon}   {capacity}%",
+        "format": "{icon} {capacity}%",
         "tooltip-format": "{timeTo}, {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " ",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": [" ", " ", " ", " ", " "],
     },
     // == Show Volume ==//
     "pulseaudio": {
@@ -100,14 +100,14 @@
         "format-bluetooth-muted": "   {volume}% {format_source}",
         "format-source": " ",
         "format-source-muted": " ",
-        "format-muted": "  {format_source} ",
+        "format-muted": "  {format_source}",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": [" ", " "]
         },
         "tooltip-format": "{desc}, {volume}%",

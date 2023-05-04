@@ -73,12 +73,12 @@
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
          "format": "{:%H:%M}  ",
-         "format-alt": "{:%A, %B %d, %Y}  "
+         "format-alt": "{:%A, %B %d, %Y}  "
     },
     // == Show Light ==//
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": [" ", " "],
+        "format-icons": [" ", " "],
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
     },
@@ -90,16 +90,16 @@
         "format-charging": " {capacity}%",
         "format-plugged": " ",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [" ", " ", " ", " ", " "],
     },
     // == Show Volume ==//
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": "   {volume}% {format_source}",
-        "format-muted": "  {format_source}",
         "format-source": " ",
         "format-source-muted": " ",
+        "format-muted": "  {format_source}",
         "format-icons": {
             "headphone": " ",
             "hands-free": " ",
@@ -107,7 +107,7 @@
             "phone": " ",
             "portable": " ",
             "car": " ",
-            "default": [" ", " ", " "]
+            "default": [" ", " "]
         },
         "tooltip-format": "{desc}, {volume}%",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
