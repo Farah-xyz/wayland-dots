@@ -105,6 +105,8 @@ alias upgrade='sudo pacman -Syu && echo "UPGRADED"'
 ## Grub && (i can use hooks To auto update grub after update Linux or grub but idon't want)
 alias install_grub='sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB' # After Update Grub
 alias update_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'	# After Update Linux Karnel
+## Others
+alias activate="source $HOME/prjcts/my_py/bin/activate"
 ## alias for configs
 alias dots="cd ~/.local/wayland-dots/"
 alias swayc="nvim ~/.config/sway/config"
