@@ -8,6 +8,9 @@ export MYVIMRC="$HOME/.config/nvim/init.lua"
 export VIMINIT="source $MYVIMRC"
 # export LESSHISTFILE=-
 # export HISTFILE="$HOME/.config/bash/.bash_history"
+#####---------- APP ENV  ----------###
+export IPYTHONDIR="$HOME/.cache/ipython_config"
+export JUPYTER_CONFIG_DIR="$HOME/.cache/jupyter_config"
 ###---------- SHELL OPTIONS -------###
 set -o vi
 shopt -s cdable_vars
