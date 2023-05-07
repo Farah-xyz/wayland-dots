@@ -78,7 +78,7 @@ seat seat0 {
 output eDP-1 {
     mode 1920x1080@60.008Hz
     background #11121D solid_color
-    background ~/pix/wall/myGirl.jpg fill
+    background ~/pix/wall/old.png fill
 }
 
 #==========================#
