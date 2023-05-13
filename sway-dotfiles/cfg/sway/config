@@ -29,11 +29,11 @@ set {
 #==========================#
 exec_always {
     mako &
-    nm-applet --indicator &
+    nm-applet &
     blueman-applet &
-    udiskie -s &
-    /usr/lib/xdg-desktop-portal-hyprland -r &
+    udiskie --smart-tray --notify &
     /usr/lib/xdg-desktop-portal &
+    /usr/lib/xdg-desktop-portal-hyprland -r &
 }
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Arc-Dark'
@@ -64,8 +64,8 @@ input "type:touchpad" {
 input "type:keyboard" {
     xkb_layout us
     xkb_options caps:escape
-    repeat_delay 250
-    repeat_rate 100
+    repeat_delay 200
+    repeat_rate 50
 }
 seat seat0 {
     hide_cursor when-typing enable
