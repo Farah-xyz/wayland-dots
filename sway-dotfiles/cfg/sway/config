@@ -31,7 +31,7 @@ exec_always {
     mako &
     nm-applet &
     blueman-applet &
-    udiskie --smart-tray --notify &
+    pgrep udiskie && pkill udiskie; udiskie --smart-tray --notify &
     /usr/lib/xdg-desktop-portal &
     /usr/lib/xdg-desktop-portal-hyprland -r &
 }
@@ -160,7 +160,7 @@ for_window [class="qutebrowser"] {
 for_window {
     [app_id="pavucontrol"] opacity 0.95
     [app_id="telegram"]    opacity 0.95
-    [app_id="foot"]        opacity 0.98
+    [app_id="foot"]        opacity 0.90
     [app_id="footfloat"]   opacity 0.95
     [app_id="lxterminal"]  opacity 0.98
     [app_id="lxfloat"]     opacity 0.95
