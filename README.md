@@ -20,9 +20,6 @@
 <summary><b>LONG READ</b></summary>
 
 ### Installation (Paq and deps)
-
-    First of all, this is a cute disclaimer. All of this settings are installed in Artix and in wayland only! I don't know how it work in other distro.
-
 #### Using paru as AUR helper 🆘
 
 ```sh
