@@ -14,9 +14,6 @@
 
 ### Install steps (Take care about it. Isn't a full tutorial)
 <details>
-
-[Read Spanish Detailed Guide Here](https://aprendiendoaprogramar.netlify.app/configurando-hyprland-y-wayland/)
-
 <summary><b>LONG READ</b></summary>
 
 ### Installation (Paq and deps)
