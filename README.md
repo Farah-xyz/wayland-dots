@@ -1,48 +1,101 @@
-<p align=center>
-    <img alt="Screenshot of various applications" src="https://github.com/Farah-xyz/wayland-dots/blob/main/sway-dotfiles/pix/screen/myWorkflow.jpg">
-    <h3 align=center>Configurations and colorschemes for Sway, and waybar.</h3>
-</p>
-<p align=center>
-    <a href="#programs">Programs</a> | <a href="#Applications">Applications</a> | <a href="#screenshots">Screenshots</a>
-</p>
+* **Window Manager** • [Sway ](https://github.com/swaywm/sway)🎨 My Home
+* **Window Manager** • [Hyprland ](https://github.com/hyprwm/Hyprland)🎨 Tiles Everywhere!
+* **Shell** • [Zsh ](https://www.zsh.org) 🐚 con [starship](https://github.com/starship/starship) Cross Shell Platform!
+* **Terminal** • [Foot ](https://github.com/wez/wezterm) 💻 A fast, lightweight and minimalistic Wayland terminal emulator
+* **Panel** • [Waybar ](https://aur.archlinux.org/packages/waybar-hyprland-git)🍧 Patched waybar following hyprland faq!
+* **Notify Daemon** • [Mako ](https://github.com/emersion/mako) 🍃 Minimalist and functional!
+* **Launcher** • [Fuzzel ](https://codeberg.org/dnkl/fuzzel) 🚀 Application launcher for wlroots based Wayland compositors, similar to rofi's `drun` mode.
+* **File Manager** • [Ranger ](https://github.com/ranger/ranger)🔖 custom!
+* **GUI Basic-IDE** • [NeoVim](Vim-fork focused on extensibility and usability) Rice IDE!
 
-# Programs
-This repository contains configuration files for many programs that I regularly use on a day to day basis. I've also given brief descriptions of what each program does so you don't have to wonder what something is -- and because you might like something and want try it out. If you'd like me to style an application that isn't listed here, submit an issue and I'll try my best.
- - [`foot`](https://codeberg.org/dnkl/foot) A fast, lightweight and minimalistic Wayland terminal emulator
- - [`cava`](https://github.com/karlstav/cava) is a console-based audio visualizer for ALSA.
- - [`mako`](https://github.com/emersion/mako) is a lightweight notification daemon for Wayland.
- - [`neofetch`](https://github.com/dylanaraps/neofetch) is a very popular command line information tool.
- - [`nvim`](https://neovim.io/) is a fork of vim that has been rewritten for usability and extensibility.
- - [`wal`](https://github.com/dylanaraps/pywal) is a color scheme generator and manager.
- - [`sway`](https://swaywm.org) is a tiling Wayland compositor which serves as a drop-in replacement of i3. Use with [#5639](https://github.com/swaywm/sway/pull/5639).
- - [`waybar`](https://github.com/Alexays/Waybar) is a highly customizable Wayland bar for Sway and Wlroots based compositors.
- - [`fuzzel`](https://codeberg.org/dnkl/fuzzel) Application launcher for wlroots based Wayland compositors, similar to rofi's `drun` mode.
- - [`qutebrowser`](https://github.com/qutebrowser/qutebrowser) A keyboard-driven, vim-like browser based on Python and Qt.
- - [`bash`](https://wiki.archlinux.org/title/Bash) Bash (Bourne-again Shell) is a command-line shell/programming language by the GNU Project
+## 🌸 Setup
 
-### Distro
-I personally use Arch Linux, but there's nothing specific to these config files that shouldn't work on other distributions. Be aware, however, that installation procedures for the individual packages will certainly be different and that the _locations_ of config files _may_ be different. If you would like to install Arch Linux follow the directions on the [Arch Wiki](https://wiki.archlinux.org/index.php/Installation_guide). I personally used [Anarchy Installer](https://anarchyinstaller.org/) to install Arch and some important packages, but it is neither necessary, nor entirely recommended.
+<img src="https://github.com/Farah-xyz/wayland-dots/blob/main/sway-dotfiles/pix/screen/myWorkflow.jpg">
 
-### Fonts
-All the applications have been setup to use the [Nord Fonts](https://github.com/ryanoasis/nerd-fonts) font, so follow the instructions on its Github for installation.
+### Install steps (Take care about it. Isn't a full tutorial)
+<details>
 
-# Applications
-The official [Arch repos](https://www.archlinux.org/packages/) or the [Arch User Repository (AUR)](https://aur.archlinux.org/) contain all of the applications I use, sometimes under a different name than the folder.
-<h4>or use my bash scripts in `wayland-dots/sway-config/swayPkg.sh`</h4>
+[Read Spanish Detailed Guide Here](https://aprendiendoaprogramar.netlify.app/configurando-hyprland-y-wayland/)
+
+<summary><b>LONG READ</b></summary>
+
+### Installation (Paq and deps)
+
+    First of all, this is a cute disclaimer. All of this settings are installed in Artix and in wayland only! I don't know how it work in other distro.
+
+#### Using paru as AUR helper 🆘
+
+```sh
+# install paru...
+mkdir $HOME/Downloads/_cloned-repos
+cd $HOME/Downloads/_cloned-repos
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
+#### Installing needed dependencies 📦
+
+```sh
+paru -S hyprland-git polkit-kde-agent dunst grimblast rofi rofi-emoji       \
+wl-clipboard wf-recorder wlogout grimblast-git hyprpicker-git hyprpaper-git \
+xdg-desktop-portal-hyprland-git ffmpegthumbnailer tumbler wtype colord      \
+imagemagick swaylock-effects qt5-wayland qt6-wayland ripgrep waybar-hyprland-git
+```
+
+**Extras*
+```sh
+# themes
+paru -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha catppuccin-mocha-grub-theme-git nwg-look
+
+# apps
+paru -S cava pavucontrol ranger zsh starship neovim viewnior noise-suppression-for-voice
+```
+
+**If you want a Graphical file-manager*
+```sh
+thunar thunar-archive-plugin file-roller
+```
 
 
-For [Sway](https://swaywm.org), make sure to use [#5639](https://github.com/swaywm/sway/pull/5639) by applying it as a [patch](https://patch-diff.githubusercontent.com/raw/swaywm/sway/pull/5639.patch) and [compiling from source](https://github.com/swaywm/sway#compiling-from-source) for the curved borders with drop shadows. Keep in mind that the config syntax may change and that not all functions work. Refer to the inline `TODO` comments and discussion threads to watch the progress.
+##### Clone Repo
 
-### Scripts & hooks
-I have some hooks for archlinux in repo `frhXM/hooks` that I use to control somme Pacman auto Commands (PKG manager for archlinux)
+```sh
+git clone https://github.com/farah-xyz/wayland-dots $HOME/Downloads/wayland-dots/
+cd $HOME/Downloads/hyprland-dots/
+rsync -avxHAXP --exclude '.git*' .* ~/
+```
 
-# Screenshots
-<blockquote>Older Screen For Older Dotfiles</blockquote>
+#### As fonts i'm using **Cartograph CF** (patched with nerdfont) It's a licensed font, then select any font you like :3
+```sh
+mkdir -p $HOME/Downloads/nerdfonts/
+cd $HOME/Downloads/
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.1/CascadiaCode.zip
+unzip '*.zip' -d $HOME/Downloads/nerdfonts/
+rm -rf *.zip
+sudo cp -R $HOME/Downloads/nerdfonts/ /usr/share/fonts/
+```
 
-|![Htop, neovim, bonsai.sh, pipes.sh, cava, neofetch, waybar][banner]|![Weechat and Discord][comms]|
-|---|---|
-|From top-left to bottom-right: `htop`, `nvim`, `bonsai.sh`, `pipes.sh`, `cava`, `neofetch`, `waybar`|Weechat and Discord (Lightcord)|
+##### Regenerate font cache
+```sh
+fc-cache -rv
+```
+### As gtk theme i'm using [Catppuccin](https://github.com/catppuccin/catppuccin)
 
-<!-- Links -->
-[banner]: https://raw.githubusercontent.com/TheAvidDev/dotfiles/master/img/banner.png
-[comms]: https://raw.githubusercontent.com/TheAvidDev/dotfiles/master/img/comms.png
+## Credits
+
+_Beauty community: [r/unixporn](https://www.reddit.com/r/unixporn)._
+
+**©** _Artist who make Wallpapers, graphics and more_
+
+**©** _All of mantainers of this amazing and opensource tools :3_
+
+---
+
+
+© [Owl4ce](https://github.com/owl4ce)
+© [Ilham25](https://github.com/ilham25)
+© [Siduck](https://github.com/siduck)
+© [NvChad](https://github.com/NvChad)
+© [Rxyhn](https://github.com/rxyhn)
+© [AmitGold](https://github.com/AmitGolden)
