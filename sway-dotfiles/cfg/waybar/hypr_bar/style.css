@@ -48,7 +48,7 @@ window#waybar {
 #tray {
   background-color: @crust;
   border: 3px solid;
-  border-radius: 90px;
+  border-radius: 10px;
   background-origin: border-box;
   background-clip: padding-box;
   padding: 0 15px;
