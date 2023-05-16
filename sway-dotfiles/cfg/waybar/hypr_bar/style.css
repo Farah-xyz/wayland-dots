@@ -48,6 +48,8 @@ window#waybar {
 #tray {
   background-color: @crust;
   border: 3px solid;
+  border-bottom: 3px solid;
+  box-shadow: 1px 1px 3 1px;
   border-radius: 10px;
   background-origin: border-box;
   background-clip: padding-box;
