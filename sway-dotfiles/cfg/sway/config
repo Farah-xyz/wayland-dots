@@ -147,12 +147,12 @@ for_window [app_id="pavucontrol"] {
     resize set width 860
     scratchpad show
 }
-for_window [title="ChatGPT | OpenAI - qutebrowser"] {
+for_window [app_id="termdrop"] {
     floating enable
-    move absolute position 1050px 50px
+    # move absolute position 1050px 50px
+    resize set height 540
+    resize set width 960
     move to scratchpad
-    resize set height 860
-    resize set width 860
     scratchpad show
 }
 # Opacity Rules:           #
@@ -368,12 +368,12 @@ mode $exit {
 }
 # Scratchpads Mode:        #
 #==========================#
-set $mode_scratch "Launch: [w]qutebrowser [p]pavucontrol"
+set $mode_scratch "Launch: [d]termdrop [p]pavucontrol"
 bindsym mod4+s mode $mode_scratch
 mode $mode_scratch {
     bindsym {
         p exec swaymsg '[app_id="pavucontrol"] scratchpad show' || pavucontrol; mode "default"
-        w exec swaymsg '[title="ChatGPT | OpenAI - qutebrowser"] scratchpad show'  || qutebrowser --target=window "https://chat.openai.com/" ; mode "default"
+        t exec swaymsg '[app_id="termdrop"] scratchpad show'  || foot --app-id="termdrop" ; mode "default"
     }
     bindsym {
         Return mode "default"
