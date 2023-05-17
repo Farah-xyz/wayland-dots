@@ -12,9 +12,8 @@
 
 /* Waybar Css */
 window#waybar {
-  background-color: @crust;
+  background-color: transparent;
   color: @subtext0;
-  border-bottom: 4px solid @base;
   transition-property: background-color;
   transition-duration: .5s;
 }
