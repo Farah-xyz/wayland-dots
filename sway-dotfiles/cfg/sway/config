@@ -368,7 +368,7 @@ mode $exit {
 }
 # Scratchpads Mode:        #
 #==========================#
-set $mode_scratch "Launch: [d]termdrop [p]pavucontrol"
+set $mode_scratch "Launch: [t]termdrop [p]pavucontrol"
 bindsym mod4+s mode $mode_scratch
 mode $mode_scratch {
     bindsym {
