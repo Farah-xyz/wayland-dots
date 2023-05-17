@@ -38,10 +38,11 @@ window#waybar.hidden {
 #custom-wf-recorder,
 #tray {
   background-color: @base;
-  border: 3px solid @mantle;
+  border: 3px solid;
+  box-shadow: 1px 1px 3 1px;
   padding: 0 15px;
   margin: 4px 4px 10px;
-  border-radius: 90px;
+  border-radius: 10px;
   background-clip: padding-box;
 }
 
