@@ -31,31 +31,25 @@ window#waybar.hidden {
 #backlight,
 #battery,
 #scratchpad,
+#tray,
 #custom-pacman,
 #custom-launcher,
 #custom-power,
-#custom-wf-recorder,
-#tray {
-  background-color: @base;
+#custom-wf-recorder {
+  background-color: @crust;
   border: 3px solid;
+  border-bottom: 3px solid;
   box-shadow: 1px 1px 3 1px;
-  padding: 0 15px;
-  margin: 4px 4px 10px;
   border-radius: 10px;
+  background-origin: border-box;
   background-clip: padding-box;
+  padding: 0 15px;
+  margin: 2px 4px 6px;
 }
 
 /* Workspaces Sway */
-#workspaces {
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
 #workspaces button {
-  color: @mauve;
   padding: 0 5px;
-  min-width: 20px;
-  min-height: 5px;
 }
 #workspaces button.focused {
   color: @red;
