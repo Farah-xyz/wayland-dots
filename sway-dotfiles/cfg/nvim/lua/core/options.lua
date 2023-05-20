@@ -67,3 +67,7 @@ vim.opt.list = true
 vim.opt.signcolumn = 'yes:1'
 vim.opt.relativenumber = false
 vim.opt.cursorline = true
+
+-- emmet Nvim
+vim.g.user_emmet_mode='a'
+vim.g.user_emmet_leader_key=','
