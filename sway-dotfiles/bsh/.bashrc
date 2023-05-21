@@ -54,12 +54,12 @@ bind '"\C-v":"run_in_neovim\n"'
 # Run Video With Fzf I'ts Magick
 # ==== Fzf CTL-P Always Run in Home ===#
 run_in_mpv() {
-    cd $HOME && fd -t f -e mp4 | fzf --preview-window=:hidden --bind 'enter:become(mpv --fs {+})'
+    cd $HOME && fd -t f -e mp4 | fzf -i --preview-window=:hidden --bind 'enter:become(mpv --fs {+})'
 }
 bind '"\C-p":"run_in_mpv\n"'
 # Fzf ALT_C Always Run in Home
 cd_with_fzf() {
-    cd $HOME && cd "$(fd -t d | fzf --preview="exa --long --tree --level=2 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
+    cd $HOME && cd "$(fd -t d | fzf -i --preview="exa --long --tree --level=2 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
 }
 bind '"\ec":"cd_with_fzf\n"'
 ###------------ ALIASES -----------###
