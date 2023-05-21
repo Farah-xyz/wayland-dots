@@ -46,7 +46,7 @@ truncation_symbol = "…/"
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
 "~" = " ~"
-"dox" = " "
+"dox" = "󰈙 "
 "dl" = " "
 "music" = " "
 "pix" = " "
