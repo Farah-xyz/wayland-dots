@@ -13,5 +13,5 @@ sudo pacman -S --needed --noconfirm wayland xorg-xwayland sway swaybg swaylock s
 	network-manager-applet \
 	bluez bluez-utils blueman \
 	pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber alsa-utils pavucontrol \
-	qt5-wayland xf86-video-intel xdg-user-dirs pacman-contrib neofetch htop starship \
+	qt5-wayland qt6-wayland xf86-video-intel xdg-user-dirs pacman-contrib neofetch htop starship \
 	npm python python-pip
