@@ -1,7 +1,8 @@
 -----------------------------------------------------------
 -- Indent line configuration file
 -----------------------------------------------------------
--- plugin: indent-blankline
+
+-- Plugin: indent-blankline
 -- url: https://github.com/lukas-reineke/indent-blankline.nvim
 
 
@@ -12,7 +13,7 @@ end
 
 indent_blankline.setup {
   char = "▏",
-  use_treesitter = false,
+  use_treesitter = true,
   show_first_indent_level = true,
   filetype_exclude = {
     'lspinfo',
