@@ -58,7 +58,7 @@ autocmd('Filetype', {
 
 -- Open a Terminal on the right tab
 autocmd('CmdlineEnter', {
-  command = 'command! Term :botright vsplit term://$SHELL'
+  command = 'command! Term :botright split term://$SHELL'
 })
 
 -- Enter insert mode when switching to terminal
