@@ -30,6 +30,7 @@ opt.ignorecase = true       -- Ignore case letters when search
 opt.smartcase = true        -- Ignore lowercase for the whole pattern
 opt.linebreak = true        -- Wrap on word boundary
 opt.wrap = false            -- Wrap lines
+opt.cursorline = true       -- Highlight cursor line undern
 opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.laststatus=3            -- Set global statusline
 

@@ -16,12 +16,12 @@ end
 -- See the README of the selected color scheme for the instruction
 -- to use.
 -- e.g.: require('color_scheme').setup{}, vim.cmd('color_scheme') ...
-require('onedark').setup {
+require('catppuccin').setup {
   -- styles: dark, darker, cool, deep, warm, warmer, light
-  style = 'deep',
+  flavour = 'mocha',
   colors = { fg = '#b2bbcc' }, --default: #a0a8b7
 }
-require('onedark').load()
+require('catppuccin').load()
 
 --[[
 Statusline color schemes.

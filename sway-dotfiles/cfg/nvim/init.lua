@@ -18,5 +18,5 @@ require('plugins/nvim-tree')
 require('plugins/indent-blankline')
 require('plugins/nvim-cmp')
 require('plugins/nvim-treesitter')
+require('plugins/nvim-mason')
 require('plugins/alpha-nvim')
-

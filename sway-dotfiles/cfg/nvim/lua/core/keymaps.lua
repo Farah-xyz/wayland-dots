@@ -11,7 +11,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Change leader to a comma
-vim.g.mapleader = ','
+-- vim.g.mapleader = ','
 
 -----------------------------------------------------------
 -- Neovim shortcuts

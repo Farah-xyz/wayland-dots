@@ -41,8 +41,7 @@ lazy.setup({
     },
 
     -- other colorschemes:
-    { 'tanvirtin/monokai.nvim', lazy = true },
-    { 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     -- Icons
     { 'kyazdani42/nvim-web-devicons', lazy = true },
@@ -101,6 +100,10 @@ lazy.setup({
 
     -- LSP
     { 'neovim/nvim-lspconfig' },
+
+    -- Mason
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
 
     -- Autocomplete
     {
