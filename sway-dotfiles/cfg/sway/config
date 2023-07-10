@@ -159,11 +159,10 @@ for_window [app_id="termdrop"] {
 #==========================#
 for_window {
     [app_id="pavucontrol"] opacity 0.98
-    [app_id="telegram"]    opacity 0.98
-    [app_id="foot"]        opacity 0.98
-    [app_id="footfloat"]   opacity 0.98
-    [app_id="lxterminal"]  opacity 0.98
-    [app_id="lxfloat"]     opacity 0.98
+    [app_id="foot"]        opacity 1.0
+    [app_id="footfloat"]   opacity 1.0
+    [app_id="lxterminal"]  opacity 1.0
+    [app_id="lxfloat"]     opacity 1.0
 }
 # Inhibit Idle Rules:      #
 #==========================#
