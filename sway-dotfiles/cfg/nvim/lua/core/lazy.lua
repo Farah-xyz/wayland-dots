@@ -1,13 +1,8 @@
 -----------------------------------------------------------
 -- Plugin manager configuration file
 -----------------------------------------------------------
-
 -- Plugin manager: lazy.nvim
 -- URL: https://github.com/folke/lazy.nvim
-
--- For information about installed plugins see the README:
--- neovim-lua/README.md
--- https://github.com/brainfucksec/neovim-lua#readme
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -33,42 +28,36 @@ end
 lazy.setup({
   spec = {
     -- Colorscheme:
-    -- The colorscheme should be available when starting Neovim.
-    {
-      'navarasu/onedark.nvim',
-      lazy = false, -- make sure we load this during startup if it is your main colorscheme
-      priority = 1000, -- make sure to load this before all the other start plugins
-    },
-
-    -- other colorschemes:
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+    -- Statusline
+    {'nvim-lualine/lualine.nvim'},
 
     -- Icons
     { 'kyazdani42/nvim-web-devicons', lazy = true },
 
     -- Dashboard (start screen)
-    {
-      'goolord/alpha-nvim',
-      dependencies = { 'kyazdani42/nvim-web-devicons' },
-    },
-
-    -- Git labels
-    {
-      'lewis6991/gitsigns.nvim',
-      lazy = true,
-      dependencies = {
-        'nvim-lua/plenary.nvim',
-        'kyazdani42/nvim-web-devicons',
-      },
-      config = function()
-        require('gitsigns').setup{}
-      end
-    },
+    {'goolord/alpha-nvim'},
 
     -- File explorer
+    {'kyazdani42/nvim-tree.lua'},
+
+    -- Toggle Terminal
+    {'akinsho/toggleterm.nvim'},
+
+    -- Indent line
+    { 'lukas-reineke/indent-blankline.nvim' },
+
+    -- Tag viewer
+    { 'preservim/tagbar' },
+
+    -- Autopair
     {
-      'kyazdani42/nvim-tree.lua',
-      dependencies = { 'kyazdani42/nvim-web-devicons' },
+      'windwp/nvim-autopairs',
+      event = 'InsertEnter',
+      config = function()
+        require('nvim-autopairs').setup{}
+      end
     },
 
     -- Commenter
@@ -91,32 +80,38 @@ lazy.setup({
         end
     },
 
-    -- Statusline
+    -- Git labels
     {
-      'freddiehaddad/feline.nvim',
+      'lewis6991/gitsigns.nvim',
+      lazy = true,
       dependencies = {
+        'nvim-lua/plenary.nvim',
         'kyazdani42/nvim-web-devicons',
-        'lewis6991/gitsigns.nvim',
+    },
+      config = function()
+        require('gitsigns').setup{}
+      end
+    },
+
+    -- CMDLine
+    {
+      "folke/noice.nvim",
+      event = "VeryLazy",
+      opts = {
+        -- add any options here
       },
+      dependencies = {
+        -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+        "MunifTanjim/nui.nvim",
+        -- OPTIONAL:
+        --   `nvim-notify` is only needed, if you want to use the notification view.
+        --   If not available, we use `mini` as the fallback
+        "rcarriga/nvim-notify",
+        }
     },
 
     -- Treesitter
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-
-    -- Indent line
-    { 'lukas-reineke/indent-blankline.nvim' },
-
-    -- Tag viewer
-    { 'preservim/tagbar' },
-
-    -- Autopair
-    {
-      'windwp/nvim-autopairs',
-      event = 'InsertEnter',
-      config = function()
-        require('nvim-autopairs').setup{}
-      end
-    },
 
     -- LSP
     { 'neovim/nvim-lspconfig' },
