@@ -71,6 +71,26 @@ lazy.setup({
       dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
 
+    -- Commenter
+    {
+        "numToStr/Comment.nvim",
+        config = function()
+            require('Comment').setup()
+        end
+    },
+
+    -- Surround
+    {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    },
+
     -- Statusline
     {
       'freddiehaddad/feline.nvim',
