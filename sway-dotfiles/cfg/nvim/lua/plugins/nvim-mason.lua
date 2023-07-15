@@ -15,5 +15,5 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
-    ensure_installed = { 'pyright', 'html', 'cssls', 'tsserver' },
+    ensure_installed = { 'pyright', 'html', 'cssls', 'tsserver', 'emmet_language_server'},
 })
