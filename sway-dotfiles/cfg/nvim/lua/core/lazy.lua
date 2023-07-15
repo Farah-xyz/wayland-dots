@@ -43,7 +43,7 @@ lazy.setup({
     {'kyazdani42/nvim-tree.lua'},
 
     -- Toggle Terminal
-    {'akinsho/toggleterm.nvim'},
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
 
     -- Indent line
     { 'lukas-reineke/indent-blankline.nvim' },
