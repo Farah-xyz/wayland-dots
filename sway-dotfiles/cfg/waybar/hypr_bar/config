@@ -5,7 +5,7 @@
     "margin": 4,
     "margin-bottom": -4,
     "position": "top",
-    "modules-left": ["custom/launcher", "wlr/workspaces", "custom/wf-recorder"],
+    "modules-left": ["custom/launcher", "wlr/workspaces", "hyprland/submap", "custom/wf-recorder"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "custom/pacman", "hyprland/language", "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
@@ -47,9 +47,12 @@
      },
 
     //== Show Mode Hyprland WM ==//
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+    "hyprland/submap": {
+        "format": "{}",
+        "max-length": 8,
+        "tooltip": false
     },
+
     // == Show Language Keyboard in Hyprland WM ==//
     "hyprland/language": {
         "format": "  {} ",

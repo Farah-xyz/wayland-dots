@@ -2,7 +2,7 @@
 
 Neovim init file
 Maintainer: brainf+ck
-Website: https://github.com/brainfucksec/neovim-lua
+Website: https://github.com/Farah-xyz/wayland-dots
 
 --]]
 

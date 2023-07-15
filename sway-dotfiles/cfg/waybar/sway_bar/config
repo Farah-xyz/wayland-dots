@@ -39,8 +39,8 @@
              "9": "九",
              "10":"十",
              "urgent": " ",
-             "focused": " ",
-             "default": " "
+     //      "focused": " ",
+     //      "default": " "
          },
      },
     //== Show Mode Sway WM ==//

@@ -21,7 +21,7 @@ window#waybar {
 
 /* Group All Modules */
 #workspaces,
-#mode,
+#submap,
 #clock,
 #idle_inhibitor,
 #language,
@@ -71,7 +71,7 @@ window#waybar {
 }
 
 /* Mode Sway */
-#mode{
+#submap{
   background-color:@blue;
   color:@crust;
 }
