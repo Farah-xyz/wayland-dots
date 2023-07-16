@@ -54,7 +54,7 @@ bind '"\C-v":"run_in_neovim\n"'
 # Run Video With Fzf I'ts Magick
 # ==== Fzf CTL-P Always Run in Home ===#
 run_in_mpv() {
-    cd $HOME && fd -t f -e mp4 | fzf -i --preview-window=:hidden --bind 'enter:become(mpv --fs {+})'
+    fd -t f -e mp4 | fzf -i --preview-window=:hidden --bind 'enter:become(mpv --fs {+})'
 }
 bind '"\C-p":"run_in_mpv\n"'
 # Fzf ALT_C Always Run in Home
@@ -151,7 +151,7 @@ alias yt='yt-dlp \
     --quiet \
     --progress \
     --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
-    --output "~/vids/%(uploader)s/%(title)s.%(ext)s" \
+    --output "~/vids/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
 '
 alias pl='yt-dlp \
     --downloader aria2c \
