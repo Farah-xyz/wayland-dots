@@ -48,9 +48,6 @@ lazy.setup({
     -- Indent line
     { 'lukas-reineke/indent-blankline.nvim' },
 
-    -- Tag viewer
-    { 'preservim/tagbar' },
-
     -- Autopair
     {
       'windwp/nvim-autopairs',
