@@ -1,7 +1,6 @@
 -----------------------------------------------------------
 -- Autocommand functions
 -----------------------------------------------------------
-
 -- Define autocommands with Lua APIs
 -- See: h:api-autocmd, h:augroup
 
@@ -10,7 +9,6 @@ local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
 
 -- General settings:
 --------------------
-
 -- Highlight on yank
 augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
@@ -34,7 +32,6 @@ autocmd('BufEnter', {
 
 -- Settings for filetypes:
 --------------------------
-
 -- Disable line length marker
 augroup('setLineLength', { clear = true })
 autocmd('Filetype', {
