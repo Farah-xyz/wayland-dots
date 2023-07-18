@@ -49,7 +49,7 @@ paccache -ruvk0
 sudo systemctl enable bluetooth
 sudo mkdir -p /etc/pacman.d/
 cd /etc/pacman.d/
-sudo git clone https://github.com/archxyz/hooks.git
+sudo git clone https://github.com/Farah-xyz/hooks
 
 echo "##############################"
 echo "########### DONE #############"

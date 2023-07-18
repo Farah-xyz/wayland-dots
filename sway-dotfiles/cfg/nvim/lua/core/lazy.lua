@@ -39,14 +39,14 @@ lazy.setup({
     -- Dashboard (start screen)
     {'goolord/alpha-nvim'},
 
-    -- File explorer
-    {'kyazdani42/nvim-tree.lua'},
-
     -- Toggle Terminal
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 
     -- Indent line
     { 'lukas-reineke/indent-blankline.nvim' },
+
+    -- File explorer
+    {'kyazdani42/nvim-tree.lua'},
 
     -- Autopair
     {
