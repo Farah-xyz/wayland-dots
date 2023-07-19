@@ -380,30 +380,7 @@ mode $mode_scratch {
         Ctrl+s mode "default"
     }
 }
-# AllWorkspacs Window Mode:#
-#==========================#
-set $mode_move_all_workspace_windows "Move all workspace windows to [0-9]?"
-bindsym $mod+shift+ctrl+m mode $mode_move_all_workspace_windows
-mode $mode_move_all_workspace_windows {
-    bindsym {
-        1 [workspace=".*"] move to workspace 1; workspace number 1, mode "default"
-        2 [workspace=".*"] move to workspace 2; workspace number 2, mode "default"
-        3 [workspace=".*"] move to workspace 3; workspace number 3, mode "default"
-        4 [workspace=".*"] move to workspace 4; workspace number 4, mode "default"
-        5 [workspace=".*"] move to workspace 5; workspace number 5, mode "default"
-        6 [workspace=".*"] move to workspace 6; workspace number 6, mode "default"
-        7 [workspace=".*"] move to workspace 7; workspace number 7, mode "default"
-        8 [workspace=".*"] move to workspace 8; workspace number 8, mode "default"
-        9 [workspace=".*"] move to workspace 9; workspace number 9, mode "default"
-        0 [workspace=".*"] move to workspace 10; workspace number 10, mode "default"
-    }
-    # back to normal: Enter or Escape
-     bindsym {
-         Return mode "default"
-         Escape mode "default"
-         $mod+shift+ctrl+m mode "default"
-    }
-}
+
 #==========================#
 #  Panels:                 #
 #==========================#
