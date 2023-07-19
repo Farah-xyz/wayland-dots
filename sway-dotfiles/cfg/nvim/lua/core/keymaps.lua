@@ -25,18 +25,20 @@ map('', '<right>', '<nop>')
 map('n', '<leader>q', ':qa!<CR>')
 map('n', '<leader>w', ':w!<CR>')
 map('n', '<leader>c', ':nohl<CR>')
-map('i', 'kk', '<Esc>')
-map('i', 'jj', '<Esc>')
-
--- Change split orientation
-map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
-map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to vertical
+map('n', '<leader>r', ':so %<CR>')
+map('i', 'kj', '<Esc>')
+map('i', 'jk', '<Esc>')
 
 -- Move around splits using Ctrl + {h,j,k,l}
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
+
+-- Change split orientation
+map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
+map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to verticalc
+
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
