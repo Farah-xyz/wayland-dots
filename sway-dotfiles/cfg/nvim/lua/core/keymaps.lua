@@ -39,7 +39,6 @@ map('n', '<C-l>', '<C-w>l')
 map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
 map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to verticalc
 
-
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
