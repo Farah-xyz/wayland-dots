@@ -15,12 +15,6 @@ end
 -----------------------------------------------------------
 -- Neovim shortcuts
 -----------------------------------------------------------
--- Disable arrow keys
-map('', '<up>', '<nop>')
-map('', '<down>', '<nop>')
-map('', '<left>', '<nop>')
-map('', '<right>', '<nop>')
-
 -- Base mappings
 map('n', '<leader>q', ':qa!<CR>')
 map('n', '<leader>w', ':w!<CR>')
@@ -34,10 +28,6 @@ map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
-
--- Change split orientation
-map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
-map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to verticalc
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts

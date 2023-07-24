@@ -1,5 +1,11 @@
-#####---------- EXPORTS ----------###
+#####---------- WAYLAND ----------###
 export MOZ_ENABLE_WAYLAND=1
+export XDG_SESSION_TYPE=wayland
+export GDK_BACKEND=wayland,x11
+export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_QPA_PLATFORMTHEME=qt5ct
+#####---------- EXPORTS ----------###
 export TERMINAL="foot"
 export BROWSER="firefox"
 export EDITOR="nvim"
