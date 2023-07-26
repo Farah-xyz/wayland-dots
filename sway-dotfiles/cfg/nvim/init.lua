@@ -1,24 +1,19 @@
 --[[
-
 Neovim init file
-Maintainer: brainf+ck
+Maintainer: Farah Aka Skoll
 Website: https://github.com/Farah-xyz/wayland-dots
-
 --]]
-
--- Import Lua modules
+----------------------
+-- Import Lua modules:
+----------------------
+-- Core
 require('core/lazy')
+require('core/options')
 require('core/autocmds')
 require('core/keymaps')
-require('core/options')
-require('lsp/lspconfig')
-require('plugins/nvim-colors')
-require('plugins/nvim-statusline')
-require('plugins/nvim-indent')
-require('plugins/nvim-alpha')
-require('plugins/nvim-notify')
-require('plugins/nvim-tree')
-require('plugins/nvim-indent')
-require('plugins/nvim-cmp')
-require('plugins/nvim-treesitter')
-require('plugins/nvim-mason')
+-- Plugins
+require('plugins/colors-nvim')
+require('plugins/statusline-nvim')
+require('plugins/alpha-nvim')
+require('plugins/indent-nvim')
+require('plugins/tree-nvim')

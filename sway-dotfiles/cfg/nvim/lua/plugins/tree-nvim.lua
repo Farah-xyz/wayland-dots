@@ -1,7 +1,6 @@
 -----------------------------------------------------------
 -- File manager configuration file
 -----------------------------------------------------------
-
 -- Plugin: nvim-tree
 -- url: https://github.com/kyazdani42/nvim-tree.lua
 
@@ -12,7 +11,9 @@ if not status_ok then
   return
 end
 
--- Call setup.
+---------------
+-- Call setup:
+---------------
 -- See: `:help nvim-tree` 4. SETUP
 -- Each of these are documented in `:help nvim-tree.OPTION_NAME`
 -- nested options are documented by accessing them with `.` (eg: `:help nvim-tree.view.mappings.list`)
@@ -35,7 +36,7 @@ nvim_tree.setup {
     centralize_selection = false,
     cursorline = true,
     debounce_delay = 15,
-    width = 30,
+    width = 34,
     hide_root_folder = false,
     side = "left",
     preserve_window_proportions = false,
@@ -55,7 +56,7 @@ nvim_tree.setup {
         relative = "editor",
         border = "rounded",
         width = 30,
-        height = 20,
+        height = 30,
         row = 1,
         col = 1,
       },

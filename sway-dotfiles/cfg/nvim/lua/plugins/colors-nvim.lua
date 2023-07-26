@@ -1,11 +1,16 @@
 -----------------------------------------------------------
 -- Color schemes configuration file
 -----------------------------------------------------------
+-- Pluins Colorscheme Catppuccin
+-- https://github.com/catppuccin/nvim
 local status_ok, catppuccin = pcall(require, 'catppuccin')
 if not status_ok then
   return
 end
 
+---------------
+-- Call Setup:
+---------------
 catppuccin.setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -50,5 +55,7 @@ catppuccin.setup({
     },
 })
 
--- setup must be called before loading
+---------------------------------------
+-- setup must be called before loading:
+---------------------------------------
 vim.cmd.colorscheme "catppuccin"
