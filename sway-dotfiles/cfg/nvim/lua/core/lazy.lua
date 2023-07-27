@@ -32,6 +32,26 @@ require("lazy").setup({
   {"nvim-lualine/lualine.nvim"},
   {"lukas-reineke/indent-blankline.nvim" },
   {"goolord/alpha-nvim"},
+  -------------------
+  -- Auto Compelete:
+  -------------------
+  {"nvim-treesitter/nvim-treesitter", build = ':TSUpdate' },
+  {"neovim/nvim-lspconfig"},
+  {"williamboman/mason.nvim"},
+  {"williamboman/mason-lspconfig.nvim"},
+  {"hrsh7th/nvim-cmp",
+    -- load cmp on InsertEnter
+    event = 'InsertEnter',
+    -- these dependencies will only be loaded when cmp loads
+    -- dependencies are always lazy-loaded unless specified otherwise
+    dependencies = {
+      'L3MON4D3/LuaSnip',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-buffer',
+      'saadparwaiz1/cmp_luasnip',
+      },
+  },
   --------------
   -- Functions:
   -------------
@@ -57,25 +77,5 @@ require("lazy").setup({
     config = function()
         require("nvim-surround").setup()
     end
-  },
-  -------------------
-  -- Auto Compelete:
-  -------------------
-  {"nvim-treesitter/nvim-treesitter", build = ':TSUpdate' },
-  {"neovim/nvim-lspconfig"},
-  {"williamboman/mason.nvim"},
-  {"williamboman/mason-lspconfig.nvim"},
-  {"hrsh7th/nvim-cmp",
-    -- load cmp on InsertEnter
-    event = 'InsertEnter',
-    -- these dependencies will only be loaded when cmp loads
-    -- dependencies are always lazy-loaded unless specified otherwise
-    dependencies = {
-      'L3MON4D3/LuaSnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
-      'saadparwaiz1/cmp_luasnip',
-      },
   },
 })

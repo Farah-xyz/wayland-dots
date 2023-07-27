@@ -19,9 +19,11 @@ opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 -- Neovim UI:
 -----------------------------------------------------------
 opt.number = true           -- Show line number
+opt.numberwidth = 6         -- Paddings In The Left Number
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
 opt.colorcolumn = '120'     -- Line lenght marker at 80 columns
+opt.cursorline = true       -- Line highlight Horizontal
 opt.splitright = true       -- Vertical split to the right
 opt.splitbelow = true       -- Horizontal split to the bottom
 opt.ignorecase = true       -- Ignore case letters when search

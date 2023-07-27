@@ -37,4 +37,4 @@ map('n', '<C-l>', '<C-w>l')
 map('n', '<leader>t', ':Term<CR>', { noremap = true })
 map('t', '<Esc>', '<C-\\><C-n>')
 -- File Explorer mappings
-map('n', '<leader>f', ':NvimTreeToggle<CR>', { noremap = true })
+map('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true })

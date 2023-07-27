@@ -11,10 +11,11 @@
 }
 /* Waybar Css */
 window#waybar {
-  background-color: rgba(30, 30, 46, 0.8);
+  background-color: rgba(17, 18, 29, 0.8);
   color: @subtext0;
   transition-property: background-color;
   transition-duration: .5s;
+  border-bottom: 2px solid @base;
 }
 
 /* Group All Modules */

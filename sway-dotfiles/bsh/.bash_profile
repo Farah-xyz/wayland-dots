@@ -6,5 +6,5 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 # If running from tty1 start sway
-[ "$(tty)" = "/dev/tty1" ] && exec sway 2> /dev/null
-[ "$(tty)" = "/dev/tty2" ] && exec Hyprland 2> /dev/null
+[ "$(tty)" = "/dev/tty1" ] &&  exec Hyprland 2> /dev/null
+[ "$(tty)" = "/dev/tty2" ] &&  exec sway 2> /dev/null
