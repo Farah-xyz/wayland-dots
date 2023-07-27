@@ -16,4 +16,9 @@ require('plugins/colors-nvim')
 require('plugins/statusline-nvim')
 require('plugins/alpha-nvim')
 require('plugins/indent-nvim')
-require('plugins/tree-nvim')
+-- AutoCompelete
+require('lsp/lspconfig')
+require('plugins/treesitter-nvim')
+require('plugins/mason-nvim')
+require('plugins/cmp-nvim')
+

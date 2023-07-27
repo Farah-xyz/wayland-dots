@@ -24,26 +24,58 @@ vim.opt.rtp:prepend(lazypath)
 -- Start setup:
 ----------------
 require("lazy").setup({
-  -------------------------------
-  -- Vim Plugins With VimScripts:
-  -------------------------------
-  "sheerun/vim-polyglot", -- Syntax highlighting
-  "mattn/emmet-vim",      -- Emmet For Html And Css
-  "tpope/vim-surround",   -- Surround For Bracket And Tags
-  "tpope/vim-commentary", -- Easy Commmante
-  ----------------------------
-  -- Neovim Plugins With Lua:
-  ----------------------------
+  --------
+  -- UI :
+  --------
   {"kyazdani42/nvim-web-devicons", lazy = true },
   {"catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {"nvim-lualine/lualine.nvim"},
   {"lukas-reineke/indent-blankline.nvim" },
-  {'goolord/alpha-nvim'},
-  {'kyazdani42/nvim-tree.lua'},
+  {"goolord/alpha-nvim"},
+  --------------
+  -- Functions:
+  -------------
+  {"kyazdani42/nvim-tree.lua",
+    config = function()
+        require('nvim-tree').setup()
+    end
+  },
   {"windwp/nvim-autopairs",
     event = 'InsertEnter',
     config = function()
       require('nvim-autopairs').setup{}
     end
+  },
+  {"numToStr/Comment.nvim",
+    config = function()
+        require('Comment').setup()
+    end
+  },
+  {"kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup()
+    end
+  },
+  -------------------
+  -- Auto Compelete:
+  -------------------
+  {"nvim-treesitter/nvim-treesitter", build = ':TSUpdate' },
+  {"neovim/nvim-lspconfig"},
+  {"williamboman/mason.nvim"},
+  {"williamboman/mason-lspconfig.nvim"},
+  {"hrsh7th/nvim-cmp",
+    -- load cmp on InsertEnter
+    event = 'InsertEnter',
+    -- these dependencies will only be loaded when cmp loads
+    -- dependencies are always lazy-loaded unless specified otherwise
+    dependencies = {
+      'L3MON4D3/LuaSnip',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-buffer',
+      'saadparwaiz1/cmp_luasnip',
+      },
   },
 })
