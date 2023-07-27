@@ -49,7 +49,8 @@
     },
     // == Show Language Keyboard in Sway WM ==//
     "sway/language": {
-        "format": "⠀ {short}⠀"
+        "format": "⠀ {shortDescription}⠀{variant}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
     },
     //== Show Scratchpads in Sway WM ==//
     "sway/scratchpad": {

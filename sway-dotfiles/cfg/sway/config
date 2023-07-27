@@ -62,8 +62,8 @@ input "type:touchpad" {
     pointer_accel 0.5
 }
 input "type:keyboard" {
-    xkb_layout us
-    xkb_options caps:escape
+    xkb_layout us,ara
+    xkb_options grp:win_space_toggle,caps:escape
     repeat_delay 200
     repeat_rate 50
 }
