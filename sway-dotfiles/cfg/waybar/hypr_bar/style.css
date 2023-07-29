@@ -9,13 +9,16 @@
   font-weight:Bold;
   font-style:Italic;
 }
+
 /* Waybar Css */
 window#waybar {
-  background-color: rgba(17, 18, 29, 0.9);
+  background-color: rgba(17, 18, 29, 0.8);
   color: @subtext0;
   transition-property: background-color;
   transition-duration: .5s;
-  border-bottom: 2px solid @base;
+}
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
 /* Group All Modules */
@@ -24,15 +27,15 @@ window#waybar {
 #clock,
 #idle_inhibitor,
 #language,
-#scratchpad,
 #pulseaudio,
 #backlight,
 #battery,
+#scratchpad,
+#tray,
 #custom-pacman,
 #custom-launcher,
-#custom-wf-recorder,
 #custom-power,
-#tray {
+#custom-wf-recorder {
   background-color: @crust;
   border: 3px solid;
   border-bottom: 3px solid;
@@ -44,17 +47,9 @@ window#waybar {
   margin: 2px 4px 6px;
 }
 
-/* Workspaces Sway */
-#workspaces {
-  margin-left: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+/* Workspaces Hyprland */
 #workspaces button {
-  color: @mauve;
   padding: 0 5px;
-  min-width: 20px;
-  min-height: 30px;
 }
 #workspaces button.active {
   color: @red;
@@ -69,7 +64,7 @@ window#waybar {
   background-color: @surface1;
 }
 
-/* Mode Sway */
+/* Submap Hyprland */
 #submap{
   background-color:@blue;
   color:@crust;
@@ -137,15 +132,19 @@ window#waybar {
 	font-size: 20px;
   color: @sky;
 }
+
 #custom-wf-recorder {
     padding: 0 20px;
     color: @red;
     border: 4px solid @pink;
     background-color: @base;
 }
+
 #custom-pacman {
   color: @pink;
 }
+
 #custom-power{
   color:@red;
 }
+
