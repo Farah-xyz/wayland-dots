@@ -12,7 +12,7 @@
 
 /* Waybar Css */
 window#waybar {
-  background-color: rgba(17, 18, 29, 0.9);
+  background-color: rgba(17, 18, 29, 0.95);
   color: @subtext0;
   transition-property: background-color;
   transition-duration: .5s;
@@ -36,7 +36,7 @@ window#waybar.hidden {
 #custom-launcher,
 #custom-power,
 #custom-wf-recorder {
-  background-color: @crust;
+  background-color: @base;
   border: 3px solid;
   border-bottom: 3px solid;
   box-shadow: 1px 1px 3 1px;
