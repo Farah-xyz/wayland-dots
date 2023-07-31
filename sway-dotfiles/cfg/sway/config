@@ -13,7 +13,7 @@ set {
     $mod Mod1
     $term foot
     $browser qutebrowser
-    $menu fuzzel -B 3 -P 50 -w 60 -b#11121Df1 -t#9399b2ff -s#2e3440ff -S#8fbcbbff -C#88c0d0ff --show-actions --terminal=foot --icon-theme=Papirus -f "JetBrains Mono Nerd Font:weight=Bold:pixelsize=18"
+    $menu fuzzel -r 0 -B 3 -P 50 -w 60 -b#11121Df1 -t#9399b2ff -s#2e3440ff -S#8fbcbbff -C#88c0d0ff --show-actions --terminal=foot --icon-theme=Papirus -f "JetBrains Mono Nerd Font:weight=Bold:pixelsize=18"
     # Vim Keys
     $left  h
     $down  j
@@ -77,7 +77,7 @@ seat seat0 {
 output eDP-1 {
     mode 1920x1080@60.008Hz
     background #11121D solid_color
-    background ~/pix/wall/wallhaven.png fill
+    background ~/pix/wall/myGirl.jpg fill
 }
 
 #==========================#
