@@ -84,16 +84,14 @@ output eDP-1 {
 # MISC :                   #
 #==========================#
     #border
-    default_border pixel 3
-    default_floating_border pixel 3
+    default_border pixel 2
+    default_floating_border pixel 2
     #Gaps
     gaps inner  5
     gaps outer  0
-    bindsym $mod+Control+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5
-    bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
     # Activate smart borders (always)
-    smart_borders off
-    smart_gaps off
+    smart_borders on
+    smart_gaps on
     # Others
     xwayland enable
     workspace_layout default
@@ -110,9 +108,6 @@ output eDP-1 {
     client.focused_inactive #1e1e2e #313244 #cdd6f4 #1e1e2e   #1e1e2e
     client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
     client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-
-    client.background       #00ff00
-
 #==========================#
 # window Rules:            #
 #==========================#
