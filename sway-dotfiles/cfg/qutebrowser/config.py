@@ -33,12 +33,12 @@ c.statusbar.widgets = ['progress', 'keypress', 'url', 'scroll', 'history', 'tabs
 ############       Tabs     ###################
 ###############################################
 c.tabs.favicons.show = 'always'
-c.tabs.favicons.scale=1.6
+c.tabs.favicons.scale=1
 c.tabs.background = True
 c.tabs.last_close = 'ignore'
 c.tabs.position = 'top'
 c.tabs.show = 'multiple'
-c.tabs.padding = { "left": 10, "right": 10, "bottom": 8, "top": 8 }
+c.tabs.padding = { "left": 5, "right": 5, "bottom": 5, "top": 5 }
 ###############################################
 ############       URL     ####################
 ###############################################
