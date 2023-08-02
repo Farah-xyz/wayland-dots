@@ -12,7 +12,7 @@
 
 /* Waybar Css */
 window#waybar {
-  background-color: rgba(17, 18, 29, 0.95);
+  background-color: rgba(17, 18, 29, 0.90);
   color: @subtext0;
   transition-property: background-color;
   transition-duration: .5s;
