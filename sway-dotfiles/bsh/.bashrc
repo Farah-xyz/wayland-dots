@@ -91,7 +91,7 @@ alias c='clear'
 alias cc='clear'
 alias v='mpv --fs'
 alias sw='swayimg --window=#11121D'
-alias sh='swayimg -n --window=#11121D'
+alias ss='swayimg -n --window=#11121D'
 ## Drive
 alias nm='nemo'
 alias drive='nemo /run/media/frhxm/'

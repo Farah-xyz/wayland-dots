@@ -50,18 +50,17 @@ window#waybar.hidden {
 /* Workspaces Hyprland */
 #workspaces button {
   padding: 0 5px;
+   color: @blue ;
 }
 #workspaces button.active {
-  color: @red;
-}
-#workspaces button.persistent{
-   color: @blue ;
+  color: @sky;
 }
 #workspaces button.urgent {
   color: @red;
 }
 #workspaces button:hover {
   background-color: @surface1;
+  border-radius:90%;
 }
 
 /* Submap Hyprland */

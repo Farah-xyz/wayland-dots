@@ -5,45 +5,20 @@
     "margin": 4,
     "margin-bottom": -4,
     "position": "top",
-    "modules-left": ["custom/launcher", "wlr/workspaces", "hyprland/submap", "custom/wf-recorder"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/submap", "custom/wf-recorder"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "custom/pacman", "hyprland/language", "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
     // ======================= Modules configuration =============================== //
     // == Workspaces Config & Icons ==/
-     "wlr/workspaces": {
-         "format": "{icon}",
-         "on-click": "close",
-         "on-scroll-up": "hyprctl dispatch workspace e+1",
-         "on-scroll-down": "hyprctl dispatch workspace e-1",
-         "persistent_workspaces": {
-              "1": [],
-              "2": [],
-              "3": [],
-              "4": [],
-//            "5": [],
-//            "6": [],
-//            "7": [],
-//            "8": [],
-//            "9": [],
-//            "10": []
-          },
-         "format-icons": {
-//            "1": "一",
-//            "2": "二",
-//            "3": "三",
-//            "4": "四",
-//            "5": "五",
-//            "6": "六",
-//            "7": "七",
-//            "8": "八",
-//            "9": "九",
-//            "10":"十",
-              "urgent": "",
-              "active": "󰮯",
-              "default": "󰊠",
-         },
-         "sort-by-number": true
+     "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+          "active": "󰮯",
+          "default": "󰊠",
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
      },
 
     //== Show Mode Hyprland WM ==//
